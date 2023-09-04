@@ -1,8 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    compiler: {
-      removeConsole: false,
-    },
     experimental: {
       serverActions: true,
       serverComponentsExternalPackages: ["mongoose"],
