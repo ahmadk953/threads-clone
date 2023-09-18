@@ -1,13 +1,16 @@
 {
-  "name": "threads",
-  "version": "0.1.0",
-  "private": true,
   "scripts": {
+    "edgio:dev": "edgio dev",
+    "edgio:build": "edgio build",
+    "edgio:deploy": "edgio deploy",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
+  "name": "threads",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
     "@clerk/nextjs": "^4.23.3",
     "@clerk/themes": "^1.7.5",
@@ -37,5 +40,12 @@
     "typescript": "5.2.2",
     "uploadthing": "^5.3.3",
     "zod": "^3.22.2"
+  },
+  "devDependencies": {
+    "@edgio/cli": "^7.2.5",
+    "@edgio/core": "^7.2.5",
+    "@edgio/devtools": "^7.2.5",
+    "@edgio/next": "^7.2.5",
+    "@edgio/prefetch": "^7.2.5"
   }
 }
