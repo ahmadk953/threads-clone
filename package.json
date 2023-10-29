@@ -39,7 +39,7 @@
     "tailwindcss-animate": "^1.0.7",
     "typescript": "5.2.2",
     "uploadthing": "^5.3.3",
-    "zod": "^3.22.2"
+    "zod": "^3.22.3"
   },
   "devDependencies": {
     "@edgio/cli": "^7.2.5",
