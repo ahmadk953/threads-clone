@@ -1,8 +1,5 @@
 {
   "scripts": {
-    "edgio:dev": "edgio dev",
-    "edgio:build": "edgio build",
-    "edgio:deploy": "edgio deploy",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
