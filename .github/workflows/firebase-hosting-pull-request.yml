@@ -15,3 +15,6 @@ jobs:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_THREADS_CLONE13290 }}'
           projectId: threads-clone13290
+        env:
+          FIREBASE_CLI_EXPERIMENTS: webframeworks
+
