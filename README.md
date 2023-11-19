@@ -1,6 +1,3 @@
-> **Note**
-> This project has been abandoned and archived due to the ammount of issues this project is causing. These issues take multiple hours to fix and I am not willing to spend hours just fixing random issues that I only seem to have. I might finish this in the future but for now, I have better things to spend my time on.
-
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
