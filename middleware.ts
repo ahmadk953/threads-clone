@@ -1,3 +1,6 @@
+// Resource: https://clerk.com/docs/nextjs/middleware#auth-middleware
+// Copy the middleware code as it is from the above resource
+
 import { authMiddleware } from "@clerk/nextjs";
 
 export default authMiddleware({
@@ -10,4 +13,4 @@ export default authMiddleware({
 
 export const config = {
   matcher: ["/((?!.*\\..*|_next).*)", "/", "/(api|trpc)(.*)"],
-}
+};
