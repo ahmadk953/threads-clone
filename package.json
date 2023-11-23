@@ -9,7 +9,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@clerk/nextjs": "^4.23.3",
+    "@clerk/nextjs": "^4.27.1",
     "@clerk/themes": "^1.7.5",
     "@hookform/resolvers": "^3.3.1",
     "@radix-ui/react-label": "^2.0.2",
@@ -26,7 +26,7 @@
     "lucide-react": "^0.271.0",
     "mongodb-client-encryption": "^2.9.0",
     "mongoose": "^7.5.0",
-    "next": "^13.4.10",
+    "next": "^14.0.3",
     "postcss": "8.4.31",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
