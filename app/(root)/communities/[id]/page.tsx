@@ -21,6 +21,7 @@ async function Page({ params }: { params: { id: string } }) {
       <ProfileHeader
         accountId={communityDetails.createdBy.id}
         authUserId={user.id}
+        communityId={communityDetails.id}
         name={communityDetails.name}
         username={communityDetails.username}
         imgUrl={communityDetails.image}
@@ -30,6 +31,7 @@ async function Page({ params }: { params: { id: string } }) {
 
       <div className='mt-9'>
         <Tabs defaultValue='threads' className='w-full'>
+          {/* For Displaying All the Tabs */}
           <TabsList className='tab'>
             {communityTabs.map((tab) => (
               <TabsTrigger key={tab.label} value={tab.value} className='tab'>
@@ -51,6 +53,7 @@ async function Page({ params }: { params: { id: string } }) {
             ))}
           </TabsList>
 
+          {/* For Functionalities of the Tabs */}
           <TabsContent value='threads' className='w-full text-light-1'>
             {/* @ts-ignore */}
             <ThreadsTab

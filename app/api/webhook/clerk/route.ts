@@ -80,7 +80,7 @@ export const POST = async (request: Request) => {
         created_by
       );
 
-      return NextResponse.json({ message: "User created" }, { status: 201 });
+      return NextResponse.json({ message: "Community created" }, { status: 201 });
     } catch (err) {
       console.log(err);
       return NextResponse.json(
@@ -164,13 +164,16 @@ export const POST = async (request: Request) => {
     try {
       // Resource: https://clerk.com/docs/reference/backend-api/tag/Organizations#operation/UpdateOrganization
       // Show what evnt?.data sends from above resource
-      const { id, logo_url, name, slug } = evnt?.data;
+      let { id, logo_url, name, slug } = evnt?.data;
+      if (logo_url === null) {
+        logo_url = 'https://img.clerk.com/eyJ0eXBlIjoiZGVmYXVsdCIsImlpZCI6Imluc18yVWRFcXhoWlowYzJOdFZGR1dHeTBtNXZzbTkiLCJyaWQiOiJvcmdfMllYbjNaQmhZc1lTYVZSb2plakJqZTF5Wk9FIiwiaW5pdGlhbHMiOiJUIn0'
+      }
       console.log("updated", evnt?.data);
 
       // @ts-ignore
       await updateCommunityInfo(id, name, slug, logo_url);
 
-      return NextResponse.json({ message: "Member removed" }, { status: 201 });
+      return NextResponse.json({ message: "Community updated" }, { status: 201 });
     } catch (err) {
       console.log(err);
 

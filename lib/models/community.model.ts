@@ -14,7 +14,10 @@ const communitySchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  image: String,
+  image: {
+    type: String,
+    required: true,
+  },
   bio: String,
   createdBy: {
     type: mongoose.Schema.Types.ObjectId,
