@@ -111,7 +111,7 @@ const AccountProfile = ({ user, btnTitle, type }: Props) => {
       if (!file.type.includes("image")) return;
 
       fileReader.onload = async (event) => {
-        const imageDataUrl = event.target?.result?.toString() || "";
+        const imageDataUrl = event.target?.result?.toString() ?? "";
         fieldChange(imageDataUrl);
       };
 

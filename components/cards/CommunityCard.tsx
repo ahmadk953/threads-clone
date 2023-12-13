@@ -14,7 +14,7 @@ interface Props {
   }[];
 }
 
-function CommunityCard({ id, name, username, imgUrl, bio, members }: Props) {
+function CommunityCard({ id, name, username, imgUrl, bio, members }: Readonly<Props>) {
   return (
     <article className='community-card'>
       <div className='flex flex-wrap items-center gap-3'>
@@ -48,7 +48,7 @@ function CommunityCard({ id, name, username, imgUrl, bio, members }: Props) {
           <div className='flex items-center'>
             {members.map((member, index) => (
               <Image
-                key={index}
+                key={index} // TODO: Make this use a unique UID instead of index
                 src={member.image}
                 alt={`user_${index}`}
                 width={28}

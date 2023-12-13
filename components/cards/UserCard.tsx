@@ -13,7 +13,7 @@ interface Props {
   personType: string;
 }
 
-function UserCard({ id, name, username, imgUrl, personType }: Props) {
+function UserCard({ id, name, username, imgUrl, personType }: Readonly<Props>) {
   const router = useRouter();
 
   const isCommunity = personType === "Community";

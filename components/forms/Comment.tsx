@@ -26,7 +26,7 @@ interface Props {
   currentUserId: string;
 }
 
-function Comment({ threadId, currentUserImg, currentUserId }: Props) {
+function Comment({ threadId, currentUserImg, currentUserId }: Readonly<Props>) {
   const pathname = usePathname();
 
   const form = useForm<z.infer<typeof CommentValidation>>({

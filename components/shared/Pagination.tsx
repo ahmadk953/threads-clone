@@ -10,7 +10,7 @@ interface Props {
   path: string;
 }
 
-function Pagination({ pageNumber, isNext, path }: Props) {
+function Pagination({ pageNumber, isNext, path }: Readonly<Props>) {
   const router = useRouter();
 
   const handleNavigation = (type: string) => {

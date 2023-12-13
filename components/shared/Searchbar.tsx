@@ -10,7 +10,7 @@ interface Props {
   routeType: string;
 }
 
-function Searchbar({ routeType }: Props) {
+function Searchbar({ routeType }: Readonly<Props>) {
   const router = useRouter();
   const [search, setSearch] = useState("");
 

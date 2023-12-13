@@ -21,7 +21,7 @@ function ProfileHeader({
   bio,
   communityId,
   type,
-}: Props) {
+}: Readonly<Props>) {
   return (
     <div className='flex w-full flex-col justify-start'>
       <div className='flex items-center justify-between'>

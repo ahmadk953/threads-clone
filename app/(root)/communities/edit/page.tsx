@@ -4,7 +4,6 @@ import useSWR from "swr";
 import AccountProfile from "@/components/forms/AccountProfile";
 import { useOrganization } from "@clerk/nextjs";
 import { NextPage } from "next";
-import { useRouter } from "next/navigation";
 
 interface CommunityData {
   id: string;
@@ -24,7 +23,6 @@ const fetcher = (url: string, headers: HeadersInit) =>
   });
 
 const Page: NextPage = () => {
-  const router = useRouter();
   const { organization } = useOrganization();
   const currentOrg = organization?.id || "";
 

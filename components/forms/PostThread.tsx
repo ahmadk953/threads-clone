@@ -24,7 +24,7 @@ interface Props {
   userId: string;
 }
 
-function PostThread({ userId }: Props) {
+function PostThread({ userId }: Readonly<Props>) {
   const router = useRouter();
   const pathname = usePathname();
 

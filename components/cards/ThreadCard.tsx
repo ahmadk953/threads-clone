@@ -38,7 +38,7 @@ function ThreadCard({
   createdAt,
   comments,
   isComment,
-}: Props) {
+}: Readonly<Props>) {
   return (
     <article
       className={`flex w-full flex-col rounded-xl ${
@@ -127,7 +127,7 @@ function ThreadCard({
         <div className="ml-1 mt-3 flex items-center gap-2">
           {comments.slice(0, 2).map((comment, index) => (
             <Image
-              key={index}
+              key={index} // TODO: Make this use a unique UID instead of index
               src={comment.author.image}
               alt={`user_${index}`}
               width={24}
