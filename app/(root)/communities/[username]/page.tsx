@@ -10,11 +10,11 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 import { fetchCommunityDetails } from "@/lib/actions/community.actions";
 
-async function Page({ params }: Readonly<{ params: { id: string } }>) {
+async function Page({ params }: Readonly<{ params: { username: string } }>) {
   const user = await currentUser();
   if (!user) return null;
 
-  const communityDetails = await fetchCommunityDetails(params.id);
+  const communityDetails = await fetchCommunityDetails(null, params.username);
 
   return (
     <section>
@@ -31,7 +31,6 @@ async function Page({ params }: Readonly<{ params: { id: string } }>) {
 
       <div className="mt-9">
         <Tabs defaultValue="threads" className="w-full">
-          {/* For Displaying All the Tabs */}
           <TabsList className="tab">
             {communityTabs.map((tab) => (
               <TabsTrigger key={tab.label} value={tab.value} className="tab">
@@ -53,9 +52,7 @@ async function Page({ params }: Readonly<{ params: { id: string } }>) {
             ))}
           </TabsList>
 
-          {/* For Functionalities of the Tabs */}
           <TabsContent value="threads" className="w-full text-light-1">
-            {/* @ts-ignore */}
             <ThreadsTab
               currentUserId={user.id}
               accountId={communityDetails._id}
@@ -79,7 +76,6 @@ async function Page({ params }: Readonly<{ params: { id: string } }>) {
           </TabsContent>
 
           <TabsContent value="requests" className="w-full text-light-1">
-            {/* @ts-ignore */}
             <ThreadsTab
               currentUserId={user.id}
               accountId={communityDetails._id}

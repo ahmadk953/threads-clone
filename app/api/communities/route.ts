@@ -3,7 +3,7 @@ import { NextResponse } from 'next/server';
 import { headers } from "next/headers";
 import { currentUser } from "@clerk/nextjs";
 
-export async function GET(request: Request) {
+export async function GET() {
   const header = headers();
   const orgId = header.get("organization-id");
   if (!orgId) {

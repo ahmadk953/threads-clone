@@ -15,12 +15,13 @@ interface Props {
     id: string;
   };
   community: {
-    id: string;
+    username: string;
     name: string;
     image: string;
   } | null;
   createdAt: string;
   comments: {
+    _id: string;
     author: {
       image: string;
     };
@@ -127,7 +128,7 @@ function ThreadCard({
         <div className="ml-1 mt-3 flex items-center gap-2">
           {comments.slice(0, 2).map((comment, index) => (
             <Image
-              key={index} // TODO: Make this use a unique UID instead of index
+              key={comment._id}
               src={comment.author.image}
               alt={`user_${index}`}
               width={24}
@@ -146,7 +147,7 @@ function ThreadCard({
 
       {!isComment && community && (
         <Link
-          href={`/communities/${community.id}`}
+          href={`/communities/${community.username}`}
           className="mt-5 flex items-center"
         >
           <p className="text-subtle-medium text-gray-1">
