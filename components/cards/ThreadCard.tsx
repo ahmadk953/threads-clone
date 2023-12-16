@@ -15,16 +15,16 @@ interface Props {
     id: string;
   };
   community: {
-    username: string;
     name: string;
     image: string;
+    username?: string;
   } | null;
   createdAt: string;
   comments: {
-    _id: string;
     author: {
       image: string;
     };
+    _id?: string;
   }[];
   isComment?: boolean;
 }

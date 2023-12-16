@@ -19,7 +19,6 @@ interface Result {
       id: string;
     };
     community: {
-      id: string;
       name: string;
       image: string;
     } | null;
@@ -71,7 +70,7 @@ async function ThreadsTab({ currentUserId, accountId, accountType }: Readonly<Pr
           }
           community={
             accountType === "Community"
-              ? { name: result.name, id: result.id, image: result.image }
+              ? { name: result.name, image: result.image }
               : thread.community
           }
           createdAt={thread.createdAt}
