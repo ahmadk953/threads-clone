@@ -117,7 +117,13 @@ export const POST = async (request: Request) => {
     try {
       // Resource: https://clerk.com/docs/reference/backend-api/tag/Organization-Memberships#operation/CreateOrganizationMembership
       // Show what evnt?.data sends from above resource
-      const { organization, public_user_data } = evnt?.data;
+      const { organization, public_user_data } = evnt?.data ?? null;
+      if (organization === null && public_user_data === null) {
+        return NextResponse.json(
+          { message: "Internal Server Error" },
+          { status: 500 }
+        );
+      }
       console.log("created", evnt?.data);
 
       // @ts-ignore

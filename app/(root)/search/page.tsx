@@ -9,9 +9,9 @@ import { fetchUser, fetchUsers } from "@/lib/actions/user.actions";
 
 async function Page({
   searchParams,
-}: {
+}: Readonly<{
   searchParams: { [key: string]: string | undefined };
-}) {
+}>) {
   const user = await currentUser();
   if (!user) return null;
 

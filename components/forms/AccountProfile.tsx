@@ -63,33 +63,21 @@ const AccountProfile = ({ user, btnTitle, type }: Props) => {
     if (hasImageChanged) {
       const imgRes = await startUpload(files);
 
-      if (imgRes && imgRes[0].fileUrl) {
-        values.profile_photo = imgRes[0].fileUrl;
+      if (imgRes && imgRes[0].url) {
+        values.profile_photo = imgRes[0].url;
       }
     }
 
-    if (type !== "Community") {
-      await updateUser({
-        name: values.name,
-        path: pathname,
-        username: values.username,
-        userId: user.id,
-        bio: values.bio,
-        image: values.profile_photo,
-      });
-    } else {
-      await updateCommunityInfo(
-        user.id,
-        values.name,
-        values.username,
-        values.profile_photo,
-        values.bio
-      );
-    }
+    await updateUser({
+      name: values.name,
+      path: pathname,
+      username: values.username,
+      userId: user.id,
+      bio: values.bio,
+      image: values.profile_photo,
+    });
 
     if (pathname === "/profile/edit") {
-      router.back();
-    } else if (pathname === "/communities/edit") {
       router.back();
     } else {
       router.push("/");
