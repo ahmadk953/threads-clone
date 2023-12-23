@@ -93,7 +93,7 @@
 
 @layer utilities {
   .css-invert {
-    @apply invert-[50%] brightness-200;
+    @apply brightness-200 invert-[50%];
   }
 
   .custom-scrollbar::-webkit-scrollbar {

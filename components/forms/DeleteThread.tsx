@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import Image from "next/image";
-import { usePathname, useRouter } from "next/navigation";
+import Image from 'next/image';
+import { usePathname, useRouter } from 'next/navigation';
 
-import { deleteThread } from "@/lib/actions/thread.actions";
+import { deleteThread } from '@/lib/actions/thread.actions';
 
 interface Props {
   threadId: string;
@@ -23,7 +23,7 @@ function DeleteThread({
   const pathname = usePathname();
   const router = useRouter();
 
-  if (currentUserId !== authorId || pathname === "/") return null;
+  if (currentUserId !== authorId || pathname === '/') return null;
 
   return (
     <Image
@@ -35,7 +35,7 @@ function DeleteThread({
       onClick={async () => {
         await deleteThread(JSON.parse(threadId), pathname);
         if (!parentId || !isComment) {
-          router.push("/");
+          router.push('/');
         }
       }}
     />

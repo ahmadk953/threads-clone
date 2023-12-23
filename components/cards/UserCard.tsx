@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import Image from "next/image";
-import { useRouter } from "next/navigation";
+import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
-import { Button } from "../ui/button";
+import { Button } from '../ui/button';
 
 interface Props {
   id: string;
@@ -16,7 +16,7 @@ interface Props {
 function UserCard({ id, name, username, imgUrl, personType }: Readonly<Props>) {
   const router = useRouter();
 
-  const isCommunity = personType === "Community";
+  const isCommunity = personType === 'Community';
 
   return (
     <article className='user-card'>

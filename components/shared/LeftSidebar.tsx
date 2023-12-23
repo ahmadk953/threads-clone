@@ -1,11 +1,11 @@
-"use client";
+'use client';
 
-import Image from "next/image";
-import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
-import { SignOutButton, SignedIn, useAuth } from "@clerk/nextjs";
+import Image from 'next/image';
+import Link from 'next/link';
+import { usePathname, useRouter } from 'next/navigation';
+import { SignOutButton, SignedIn, useAuth } from '@clerk/nextjs';
 
-import { sidebarLinks } from "@/constants";
+import { sidebarLinks } from '@/constants';
 
 const LeftSidebar = () => {
   const router = useRouter();
@@ -21,13 +21,13 @@ const LeftSidebar = () => {
             (pathname.includes(link.route) && link.route.length > 1) ||
             pathname === link.route;
 
-          if (link.route === "/profile") link.route = `${link.route}/${userId}`;
+          if (link.route === '/profile') link.route = `${link.route}/${userId}`;
 
           return (
             <Link
               href={link.route}
               key={link.label}
-              className={`leftsidebar_link ${isActive && "bg-primary-500 "}`}
+              className={`leftsidebar_link ${isActive && 'bg-primary-500 '}`}
             >
               <Image
                 src={link.imgURL}
@@ -44,7 +44,7 @@ const LeftSidebar = () => {
 
       <div className='mt-10 px-6'>
         <SignedIn>
-          <SignOutButton signOutCallback={() => router.push("/sign-in")}>
+          <SignOutButton signOutCallback={() => router.push('/sign-in')}>
             <div className='flex cursor-pointer gap-4 p-4'>
               <Image
                 src='/assets/logout.svg'

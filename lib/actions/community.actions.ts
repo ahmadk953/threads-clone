@@ -1,12 +1,12 @@
-"use server";
+'use server';
 
-import { FilterQuery, SortOrder } from "mongoose";
+import { FilterQuery, SortOrder } from 'mongoose';
 
-import Community from "../models/community.model";
-import Thread from "../models/thread.model";
-import User from "../models/user.model";
+import Community from '../models/community.model';
+import Thread from '../models/thread.model';
+import User from '../models/user.model';
 
-import { connectToDB } from "../mongoose";
+import { connectToDB } from '../mongoose';
 
 export async function createCommunity(
   id: string,
@@ -23,7 +23,7 @@ export async function createCommunity(
     const user = await User.findOne({ id: createdById });
 
     if (!user) {
-      throw new Error("User not found"); // Handle the case if the user with the id is not found
+      throw new Error('User not found'); // Handle the case if the user with the id is not found
     }
 
     const newCommunity = new Community({
@@ -44,7 +44,7 @@ export async function createCommunity(
     return createdCommunity;
   } catch (error) {
     // Handle any errors
-    console.error("Error creating community:", error);
+    console.error('Error creating community:', error);
     throw error;
   }
 }
@@ -55,16 +55,16 @@ export async function fetchCommunityDetails(id?: any, username?: string) {
 
     const query = username ? { username } : { id };
     const communityDetails = await Community.findOne(query)
-      .populate("createdBy")
+      .populate('createdBy')
       .populate({
-        path: "members",
+        path: 'members',
         model: User,
-        select: "name username image _id id",
+        select: 'name username image _id id',
       });
 
     return communityDetails;
   } catch (error) {
-    console.error("Error fetching community details:", error);
+    console.error('Error fetching community details:', error);
     throw error;
   }
 }
@@ -74,21 +74,21 @@ export async function fetchCommunityPosts(id: string) {
     connectToDB();
 
     const communityPosts = await Community.findById(id).populate({
-      path: "threads",
+      path: 'threads',
       model: Thread,
       populate: [
         {
-          path: "author",
+          path: 'author',
           model: User,
-          select: "name image id", // Select the "name" and "_id" fields from the "User" model
+          select: 'name image id', // Select the "name" and "_id" fields from the "User" model
         },
         {
-          path: "children",
+          path: 'children',
           model: Thread,
           populate: {
-            path: "author",
+            path: 'author',
             model: User,
-            select: "image _id", // Select the "name" and "_id" fields from the "User" model
+            select: 'image _id', // Select the "name" and "_id" fields from the "User" model
           },
         },
       ],
@@ -97,16 +97,16 @@ export async function fetchCommunityPosts(id: string) {
     return communityPosts;
   } catch (error) {
     // Handle any errors
-    console.error("Error fetching community posts:", error);
+    console.error('Error fetching community posts:', error);
     throw error;
   }
 }
 
 export async function fetchCommunities({
-  searchString = "",
+  searchString = '',
   pageNumber = 1,
   pageSize = 20,
-  sortBy = "desc",
+  sortBy = 'desc',
 }: {
   searchString?: string;
   pageNumber?: number;
@@ -120,13 +120,13 @@ export async function fetchCommunities({
     const skipAmount = (pageNumber - 1) * pageSize;
 
     // Create a case-insensitive regular expression for the provided search string.
-    const regex = new RegExp(searchString, "i");
+    const regex = new RegExp(searchString, 'i');
 
     // Create an initial query object to filter communities.
     const query: FilterQuery<typeof Community> = {};
 
     // If the search string is not empty, add the $or operator to match either username or name fields.
-    if (searchString.trim() !== "") {
+    if (searchString.trim() !== '') {
       query.$or = [
         { username: { $regex: regex } },
         { name: { $regex: regex } },
@@ -141,7 +141,7 @@ export async function fetchCommunities({
       .sort(sortOptions)
       .skip(skipAmount)
       .limit(pageSize)
-      .populate("members");
+      .populate('members');
 
     // Count the total number of communities that match the search criteria (without pagination).
     const totalCommunitiesCount = await Community.countDocuments(query);
@@ -153,7 +153,7 @@ export async function fetchCommunities({
 
     return { communities, isNext };
   } catch (error) {
-    console.error("Error fetching communities:", error);
+    console.error('Error fetching communities:', error);
     throw error;
   }
 }
@@ -169,19 +169,19 @@ export async function addMemberToCommunity(
     const community = await Community.findOne({ id: communityId });
 
     if (!community) {
-      throw new Error("Community not found");
+      throw new Error('Community not found');
     }
 
     // Find the user by their unique id
     const user = await User.findOne({ id: memberId });
 
     if (!user) {
-      throw new Error("User not found");
+      throw new Error('User not found');
     }
 
     // Check if the user is already a member of the community
     if (community.members.includes(user._id)) {
-      throw new Error("User is already a member of the community");
+      throw new Error('User is already a member of the community');
     }
 
     // Add the user's _id to the members array in the community
@@ -195,7 +195,7 @@ export async function addMemberToCommunity(
     return community;
   } catch (error) {
     // Handle any errors
-    console.error("Error adding member to community:", error);
+    console.error('Error adding member to community:', error);
     throw error;
   }
 }
@@ -214,11 +214,11 @@ export async function removeUserFromCommunity(
     );
 
     if (!userIdObject) {
-      throw new Error("User not found");
+      throw new Error('User not found');
     }
 
     if (!communityIdObject) {
-      throw new Error("Community not found");
+      throw new Error('Community not found');
     }
 
     // Remove the user's _id from the members array in the community
@@ -236,7 +236,7 @@ export async function removeUserFromCommunity(
     return { success: true };
   } catch (error) {
     // Handle any errors
-    console.error("Error removing user from community:", error);
+    console.error('Error removing user from community:', error);
     throw error;
   }
 }
@@ -258,13 +258,13 @@ export async function updateCommunityInfo(
     );
 
     if (!updatedCommunity) {
-      throw new Error("Community not found");
+      throw new Error('Community not found');
     }
 
     return updatedCommunity;
   } catch (error) {
     // Handle any errors
-    console.error("Error updating community information:", error);
+    console.error('Error updating community information:', error);
     throw error;
   }
 }
@@ -279,7 +279,7 @@ export async function deleteCommunity(communityId: string) {
     });
 
     if (!deletedCommunity) {
-      throw new Error("Community not found");
+      throw new Error('Community not found');
     }
 
     // Delete all threads associated with the community
@@ -298,7 +298,7 @@ export async function deleteCommunity(communityId: string) {
 
     return deletedCommunity;
   } catch (error) {
-    console.error("Error deleting community: ", error);
+    console.error('Error deleting community: ', error);
     throw error;
   }
 }

@@ -1,10 +1,10 @@
-"use client";
+'use client';
 
-import * as z from "zod";
-import { useForm } from "react-hook-form";
-import { useOrganization } from "@clerk/nextjs";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { usePathname, useRouter } from "next/navigation";
+import * as z from 'zod';
+import { useForm } from 'react-hook-form';
+import { useOrganization } from '@clerk/nextjs';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { usePathname, useRouter } from 'next/navigation';
 
 import {
   Form,
@@ -13,12 +13,12 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form";
-import { Button } from "@/components/ui/button";
-import { Textarea } from "@/components/ui/textarea";
+} from '@/components/ui/form';
+import { Button } from '@/components/ui/button';
+import { Textarea } from '@/components/ui/textarea';
 
-import { ThreadValidation } from "@/lib/validations/thread";
-import { createThread } from "@/lib/actions/thread.actions";
+import { ThreadValidation } from '@/lib/validations/thread';
+import { createThread } from '@/lib/actions/thread.actions';
 
 interface Props {
   userId: string;
@@ -33,7 +33,7 @@ function PostThread({ userId }: Readonly<Props>) {
   const form = useForm<z.infer<typeof ThreadValidation>>({
     resolver: zodResolver(ThreadValidation),
     defaultValues: {
-      thread: "",
+      thread: '',
       accountId: userId,
     },
   });
@@ -46,7 +46,7 @@ function PostThread({ userId }: Readonly<Props>) {
       path: pathname,
     });
 
-    router.push("/");
+    router.push('/');
   };
 
   return (

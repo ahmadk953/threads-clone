@@ -1,5 +1,5 @@
-import Link from "next/link";
-import Image from "next/image";
+import Link from 'next/link';
+import Image from 'next/image';
 
 interface Props {
   accountId: string;
@@ -42,7 +42,7 @@ function ProfileHeader({
             <p className='text-base-medium text-gray-1'>@{username}</p>
           </div>
         </div>
-        {accountId === authUserId && type !== "Community" && (
+        {accountId === authUserId && type !== 'Community' && (
           <Link href='/profile/edit'>
             <div className='flex cursor-pointer gap-3 rounded-lg bg-dark-3 px-4 py-2'>
               <Image
@@ -56,7 +56,7 @@ function ProfileHeader({
             </div>
           </Link>
         )}
-        {accountId === authUserId && type === "Community" && (
+        {accountId === authUserId && type === 'Community' && (
           <Link href={`/communities/edit`}>
             <div className='flex cursor-pointer gap-3 rounded-lg bg-dark-3 px-4 py-2'>
               <Image

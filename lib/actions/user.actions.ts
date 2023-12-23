@@ -1,20 +1,20 @@
-"use server";
+'use server';
 
-import { FilterQuery, SortOrder } from "mongoose";
-import { revalidatePath } from "next/cache";
+import { FilterQuery, SortOrder } from 'mongoose';
+import { revalidatePath } from 'next/cache';
 
-import Community from "../models/community.model";
-import Thread from "../models/thread.model";
-import User from "../models/user.model";
+import Community from '../models/community.model';
+import Thread from '../models/thread.model';
+import User from '../models/user.model';
 
-import { connectToDB } from "../mongoose";
+import { connectToDB } from '../mongoose';
 
 export async function fetchUser(userId: string) {
   try {
     connectToDB();
 
     return await User.findOne({ id: userId }).populate({
-      path: "communities",
+      path: 'communities',
       model: Community,
     });
   } catch (error: any) {
@@ -54,7 +54,7 @@ export async function updateUser({
       { upsert: true }
     );
 
-    if (path === "/profile/edit") {
+    if (path === '/profile/edit') {
       revalidatePath(path);
     }
   } catch (error: any) {
@@ -68,28 +68,28 @@ export async function fetchUserPosts(userId: string) {
 
     // Find all threads authored by the user with the given userId
     const threads = await User.findOne({ id: userId }).populate({
-      path: "threads",
+      path: 'threads',
       model: Thread,
       populate: [
         {
-          path: "community",
+          path: 'community',
           model: Community,
-          select: "name id image _id", // Select the "name" and "_id" fields from the "Community" model
+          select: 'name id image _id', // Select the "name" and "_id" fields from the "Community" model
         },
         {
-          path: "children",
+          path: 'children',
           model: Thread,
           populate: {
-            path: "author",
+            path: 'author',
             model: User,
-            select: "name image id", // Select the "name" and "_id" fields from the "User" model
+            select: 'name image id', // Select the "name" and "_id" fields from the "User" model
           },
         },
       ],
     });
     return threads;
   } catch (error) {
-    console.error("Error fetching user threads:", error);
+    console.error('Error fetching user threads:', error);
     throw error;
   }
 }
@@ -97,10 +97,10 @@ export async function fetchUserPosts(userId: string) {
 // Almost similar to Thead (search + pagination) and Community (search + pagination)
 export async function fetchUsers({
   userId,
-  searchString = "",
+  searchString = '',
   pageNumber = 1,
   pageSize = 20,
-  sortBy = "desc",
+  sortBy = 'desc',
 }: {
   userId: string;
   searchString?: string;
@@ -115,7 +115,7 @@ export async function fetchUsers({
     const skipAmount = (pageNumber - 1) * pageSize;
 
     // Create a case-insensitive regular expression for the provided search string.
-    const regex = new RegExp(searchString, "i");
+    const regex = new RegExp(searchString, 'i');
 
     // Create an initial query object to filter users.
     const query: FilterQuery<typeof User> = {
@@ -123,7 +123,7 @@ export async function fetchUsers({
     };
 
     // If the search string is not empty, add the $or operator to match either username or name fields.
-    if (searchString.trim() !== "") {
+    if (searchString.trim() !== '') {
       query.$or = [
         { username: { $regex: regex } },
         { name: { $regex: regex } },
@@ -148,7 +148,7 @@ export async function fetchUsers({
 
     return { users, isNext };
   } catch (error) {
-    console.error("Error fetching users:", error);
+    console.error('Error fetching users:', error);
     throw error;
   }
 }
@@ -170,14 +170,14 @@ export async function getActivity(userId: string) {
       _id: { $in: childThreadIds },
       author: { $ne: userId }, // Exclude threads authored by the same user
     }).populate({
-      path: "author",
+      path: 'author',
       model: User,
-      select: "name image _id",
+      select: 'name image _id',
     });
 
     return replies;
   } catch (error) {
-    console.error("Error fetching replies: ", error);
+    console.error('Error fetching replies: ', error);
     throw error;
   }
 }

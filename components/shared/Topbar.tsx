@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import { OrganizationSwitcher, SignedIn, SignOutButton } from "@clerk/nextjs";
+import { OrganizationSwitcher, SignedIn, SignOutButton } from '@clerk/nextjs';
 import { dark } from '@clerk/themes';
-import Image from "next/image";
-import Link from "next/link";
+import Image from 'next/image';
+import Link from 'next/link';
 
 function Topbar() {
   return (
@@ -33,7 +33,7 @@ function Topbar() {
           appearance={{
             baseTheme: dark,
             elements: {
-              organizationSwitcherTrigger: "py-2 px-4",
+              organizationSwitcherTrigger: 'py-2 px-4',
             },
           }}
         />

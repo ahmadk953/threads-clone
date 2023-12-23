@@ -1,10 +1,10 @@
-"use client";
+'use client';
 
-import { z } from "zod";
-import Image from "next/image";
-import { useForm } from "react-hook-form";
-import { usePathname } from "next/navigation";
-import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from 'zod';
+import Image from 'next/image';
+import { useForm } from 'react-hook-form';
+import { usePathname } from 'next/navigation';
+import { zodResolver } from '@hookform/resolvers/zod';
 
 import {
   Form,
@@ -12,13 +12,13 @@ import {
   FormField,
   FormItem,
   FormLabel,
-} from "@/components/ui/form";
+} from '@/components/ui/form';
 
-import { Input } from "../ui/input";
-import { Button } from "../ui/button";
+import { Input } from '../ui/input';
+import { Button } from '../ui/button';
 
-import { CommentValidation } from "@/lib/validations/thread";
-import { addCommentToThread } from "@/lib/actions/thread.actions";
+import { CommentValidation } from '@/lib/validations/thread';
+import { addCommentToThread } from '@/lib/actions/thread.actions';
 
 interface Props {
   threadId: string;
@@ -32,7 +32,7 @@ function Comment({ threadId, currentUserImg, currentUserId }: Readonly<Props>) {
   const form = useForm<z.infer<typeof CommentValidation>>({
     resolver: zodResolver(CommentValidation),
     defaultValues: {
-      thread: "",
+      thread: '',
     },
   });
 
