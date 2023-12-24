@@ -45,16 +45,9 @@ function ThreadCard({
   likes = [],
   isComment,
 }: Readonly<Props>) {
-  function getRandomLikeCount(min: number, max: number): number {
-    const range = max - min;
-    const randomValue = Math.random();
-    const randomNumber = min + Math.floor(randomValue * range);
-    return randomNumber;
-  }
-
   const likeData = {
     threadId: id,
-    userId: userId || '',
+    userId: userId ?? '',
     likeCount: likes || [],
   };
   return (
