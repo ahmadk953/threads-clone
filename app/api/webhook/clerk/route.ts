@@ -151,6 +151,7 @@ export const POST = async (request: Request) => {
     try {
       // Resource: https://clerk.com/docs/reference/backend-api/tag/Organization-Memberships#operation/DeleteOrganizationMembership
       // Show what evnt?.data sends from above resource
+      if (!evnt?.data) return NextResponse.json({ message: 'Internal Server Error' }, { status: 500 });
       const { organization, public_user_data } = evnt?.data;
       console.log('removed', evnt?.data);
 
@@ -173,6 +174,7 @@ export const POST = async (request: Request) => {
     try {
       // Resource: https://clerk.com/docs/reference/backend-api/tag/Organizations#operation/UpdateOrganization
       // Show what evnt?.data sends from above resource
+      if (!evnt?.data) return NextResponse.json({ message: 'Internal Server Error' }, { status: 500 });
       let { id, logo_url, name, slug } = evnt?.data;
       if (logo_url === null) {
         logo_url =
@@ -202,6 +204,7 @@ export const POST = async (request: Request) => {
     try {
       // Resource: https://clerk.com/docs/reference/backend-api/tag/Organizations#operation/DeleteOrganization
       // Show what evnt?.data sends from above resource
+      if (!evnt?.data) return NextResponse.json({ message: 'Internal Server Error' }, { status: 500 });
       const { id } = evnt?.data;
       console.log('deleted', evnt?.data);
 
