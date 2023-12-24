@@ -161,6 +161,34 @@ export async function deleteThread(id: string, path: string): Promise<void> {
   }
 }
 
+export const likeToThread = async (
+  threadId: string,
+  userId: string,
+  path: string
+): Promise<void> => {
+  try {
+    connectToDB();
+    const thread = await Thread.findById(threadId);
+
+    const userIndex = thread.likes.indexOf(userId);
+
+    if (userIndex === -1) {
+      thread.likes.push(userId);
+    } else {
+      thread.likes.splice(userIndex, 1);
+    }
+
+    await thread.save();
+    revalidatePath(path);
+  } catch (error: any) {
+    if (error instanceof Error) {
+      throw new Error(`Can't add like to thread: ${error.message}`);
+    } else {
+      throw new Error(`An unknown error occurred: ${error.message}`);
+    }
+  }
+};
+
 export async function fetchThreadById(threadId: string) {
   connectToDB();
 

@@ -13,3 +13,8 @@ Documentation for this project can be found at the [Wiki](https://github.com/ahm
 ## How to Access the Site
 
 You can access the site by going to [the website](https://monumental-flan-fa9272.netlify.app/).
+
+## Credits & Resources
+
+Base Code: [adrianhajdin/threads](https://github.com/adrianhajdin/threads)  
+Extras: [Tanvir-Alam625/Threads](https://github.com/Tanvir-Alam625/Threads)

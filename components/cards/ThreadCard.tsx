@@ -3,6 +3,7 @@ import Link from 'next/link';
 
 import { formatDateString } from '@/lib/utils';
 import DeleteThread from '../forms/DeleteThread';
+import Like from '../shared/Like';
 
 interface Props {
   id: string;
@@ -27,19 +28,35 @@ interface Props {
     _id?: string;
   }[];
   isComment?: boolean;
+  userId?: string;
+  likes?: string[];
 }
 
 function ThreadCard({
   id,
   currentUserId,
   parentId,
+  userId,
   content,
   author,
   community,
   createdAt,
   comments,
+  likes = [],
   isComment,
 }: Readonly<Props>) {
+  function getRandomLikeCount(min: number, max: number): number {
+    const range = max - min;
+    const randomValue = Math.random();
+    const randomNumber = min + Math.floor(randomValue * range);
+    return randomNumber;
+  }
+
+  const likeData = {
+    threadId: id,
+    userId: userId || '',
+    likeCount: likes || [],
+  };
   return (
     <article
       className={`flex w-full flex-col rounded-xl ${
@@ -72,13 +89,7 @@ function ThreadCard({
 
             <div className={`${isComment && 'mb-10'} mt-5 flex flex-col gap-3`}>
               <div className='flex gap-3.5'>
-                <Image
-                  src='/assets/heart-gray.svg'
-                  alt='heart'
-                  width={24}
-                  height={24}
-                  className='cursor-pointer object-contain'
-                />
+                <Like {...likeData} />
                 <Link href={`/thread/${id}`}>
                   <Image
                     src='/assets/reply.svg'

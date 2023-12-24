@@ -10,6 +10,7 @@ interface Props {
   bio: string;
   members: {
     image: string;
+    id: string;
   }[];
 }
 
@@ -53,7 +54,7 @@ function CommunityCard({
           <div className='flex items-center'>
             {members.map((member, index) => (
               <Image
-                key={index} // TODO: Make this use a unique UID instead of index
+                key={member.id}
                 src={member.image}
                 alt={`user_${index}`}
                 width={28}

@@ -159,3 +159,61 @@
 .comment-form_btn {
   @apply rounded-3xl bg-primary-500 px-8 py-2 !text-small-regular text-light-1 max-xs:w-full !important;
 }
+
+.like-parent {
+  transform: scale(0.5);
+}
+.heart-container {
+  background: rgba(255, 192, 200, 0);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 100ms ease;
+}
+
+.heart-icon {
+  height: 100px;
+  width: 100px;
+  padding: 30px;
+  background: url('../public/assets/heart.png');
+  background-position: left;
+  cursor: pointer;
+  position: absolute;
+}
+
+.heart-container:hover {
+  background: rgba(255, 192, 200, 0.7);
+}
+
+.heart-icon.liked {
+  animation: like-anim 0.7s steps(28) forwards;
+}
+.heart-icon.already-like {
+  animation: like-anim -0.7s steps(28) forwards;
+}
+.likes-number-before {
+  transition:
+    transform 0.3s ease-in-out,
+    opacity 0.3s ease-in-out,
+    color 0.3s;
+}
+.likes-number-after {
+  transition:
+    transform 0.4s ease-in-out,
+    opacity 0.4s ease-in-out,
+    color 0.4s;
+  transform: translateY(100%);
+}
+.likes-number-before.slide-up {
+  transform: translateY(-200%);
+}
+.likes-number-after.slide-down {
+  transform: translateY(-100%);
+}
+
+@keyframes like-anim {
+  to {
+    background-position: right;
+  }
+}

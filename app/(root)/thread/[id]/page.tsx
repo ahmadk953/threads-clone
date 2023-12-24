@@ -27,6 +27,7 @@ async function page({ params }: { params: { id: string } }) {
           id={thread._id}
           currentUserId={user.id}
           parentId={thread.parentId}
+          userId={userInfo._id}
           content={thread.text}
           author={thread.author}
           community={thread.community}
@@ -50,6 +51,7 @@ async function page({ params }: { params: { id: string } }) {
             id={childItem._id}
             currentUserId={user.id}
             parentId={childItem.parentId}
+            userId={userInfo._id}
             content={childItem.text}
             author={childItem.author}
             community={childItem.community}
