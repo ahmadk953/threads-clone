@@ -175,7 +175,7 @@ module.exports = {
       colors: {
         'primary-500': '#877EFF',
         'secondary-500': '#FFB620',
-        'blue': '#0095F6',
+        blue: '#0095F6',
         'logout-btn': '#FF5A5A',
         'navbar-menu': 'rgba(16, 16, 18, 0.6)',
         'dark-1': '#000000',
@@ -187,7 +187,7 @@ module.exports = {
         'light-3': '#7878A3',
         'light-4': '#5C5C7B',
         'gray-1': '#697C89',
-        'glassmorphism': 'rgba(16, 16, 18, 0.60)',
+        glassmorphism: 'rgba(16, 16, 18, 0.60)',
       },
       boxShadow: {
         'count-badge': '0px 0px 6px 2px rgba(219, 188, 159, 0.30)',

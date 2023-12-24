@@ -24,7 +24,6 @@ import { isBase64Image } from '@/lib/utils';
 
 import { UserValidation } from '@/lib/validations/user';
 import { updateUser } from '@/lib/actions/user.actions';
-import { updateCommunityInfo } from '@/lib/actions/community.actions';
 
 interface Props {
   user: {
