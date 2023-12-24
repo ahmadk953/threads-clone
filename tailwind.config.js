@@ -15,162 +15,7 @@ module.exports = {
         '2xl': '1400px',
       },
     },
-    fontSize: {
-      'heading1-bold': [
-        '36px',
-        {
-          lineHeight: '140%',
-          fontWeight: '700',
-        },
-      ],
-      'heading1-semibold': [
-        '36px',
-        {
-          lineHeight: '140%',
-          fontWeight: '600',
-        },
-      ],
-      'heading2-bold': [
-        '30px',
-        {
-          lineHeight: '140%',
-          fontWeight: '700',
-        },
-      ],
-      'heading2-semibold': [
-        '30px',
-        {
-          lineHeight: '140%',
-          fontWeight: '600',
-        },
-      ],
-      'heading3-bold': [
-        '24px',
-        {
-          lineHeight: '140%',
-          fontWeight: '700',
-        },
-      ],
-      'heading4-medium': [
-        '20px',
-        {
-          lineHeight: '140%',
-          fontWeight: '500',
-        },
-      ],
-      'body-bold': [
-        '18px',
-        {
-          lineHeight: '140%',
-          fontWeight: '700',
-        },
-      ],
-      'body-semibold': [
-        '18px',
-        {
-          lineHeight: '140%',
-          fontWeight: '600',
-        },
-      ],
-      'body-medium': [
-        '18px',
-        {
-          lineHeight: '140%',
-          fontWeight: '500',
-        },
-      ],
-      'body-normal': [
-        '18px',
-        {
-          lineHeight: '140%',
-          fontWeight: '400',
-        },
-      ],
-      'body1-bold': [
-        '18px',
-        {
-          lineHeight: '140%',
-          fontWeight: '700',
-        },
-      ],
-      'base-regular': [
-        '16px',
-        {
-          lineHeight: '140%',
-          fontWeight: '400',
-        },
-      ],
-      'base-medium': [
-        '16px',
-        {
-          lineHeight: '140%',
-          fontWeight: '500',
-        },
-      ],
-      'base-semibold': [
-        '16px',
-        {
-          lineHeight: '140%',
-          fontWeight: '600',
-        },
-      ],
-      'base1-semibold': [
-        '16px',
-        {
-          lineHeight: '140%',
-          fontWeight: '600',
-        },
-      ],
-      'small-regular': [
-        '14px',
-        {
-          lineHeight: '140%',
-          fontWeight: '400',
-        },
-      ],
-      'small-medium': [
-        '14px',
-        {
-          lineHeight: '140%',
-          fontWeight: '500',
-        },
-      ],
-      'small-semibold': [
-        '14px',
-        {
-          lineHeight: '140%',
-          fontWeight: '600',
-        },
-      ],
-      'subtle-medium': [
-        '12px',
-        {
-          lineHeight: '16px',
-          fontWeight: '500',
-        },
-      ],
-      'subtle-semibold': [
-        '12px',
-        {
-          lineHeight: '16px',
-          fontWeight: '600',
-        },
-      ],
-      'tiny-medium': [
-        '10px',
-        {
-          lineHeight: '140%',
-          fontWeight: '500',
-        },
-      ],
-      'x-small-semibold': [
-        '7px',
-        {
-          lineHeight: '9.318px',
-          fontWeight: '600',
-        },
-      ],
-    },
+    fontSize: generateFontSizes(),
     extend: {
       colors: {
         'primary-500': '#877EFF',
@@ -214,3 +59,50 @@ module.exports = {
   },
   plugins: [require('tailwindcss-animate')],
 };
+
+function generateFontSizes() {
+  const sizes = {
+    heading1: '36px',
+    heading2: '30px',
+    heading3: '24px',
+    heading4: '20px',
+    body: '18px',
+    base: '16px',
+    small: '14px',
+    subtle: '12px',
+    tiny: '10px',
+    'x-small': '7px',
+  };
+
+  const fontWeights = {
+    bold: '700',
+    semibold: '600',
+    medium: '500',
+    regular: '400',
+  };
+
+  const fontSizeConfig = {};
+
+  for (const [sizeKey, sizeValue] of Object.entries(sizes)) {
+    for (const [weightKey, weightValue] of Object.entries(fontWeights)) {
+      const name = `${sizeKey}-${weightKey}`;
+      fontSizeConfig[name] = [
+        sizeValue,
+        {
+          lineHeight: '140%',
+          fontWeight: weightValue,
+        },
+      ];
+      // Special case for 'subtle' with different lineHeight
+      if (sizeKey === 'subtle') {
+        fontSizeConfig[name][1].lineHeight = '16px';
+      }
+      // Special case for 'x-small' with different lineHeight
+      if (sizeKey === 'x-small') {
+        fontSizeConfig[name][1].lineHeight = '9.318px';
+      }
+    }
+  }
+
+  return fontSizeConfig;
+}
