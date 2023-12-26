@@ -2,7 +2,7 @@
 import { likeToThread } from '@/lib/actions/thread.actions';
 import millify from 'millify';
 import { usePathname } from 'next/navigation';
-import React, { useEffect, useLayoutEffect, useState } from 'react';
+import { useLayoutEffect, useState } from 'react';
 
 type Props = {
   likeCount: string[];
@@ -52,12 +52,13 @@ const Like = ({ likeCount, threadId, userId }: Props) => {
     <div className='flex items-center gap-3 text-gray-1 duration-200 ease-in-out hover:text-[red]'>
       <div title={isLiked ? 'Unlike' : 'Like'} className='like-parent'>
         <div className='heart-container'>
-          <div
+          <button
             className={`heart-icon ${!beforeLike && isLiked ? 'liked' : ''} ${
               beforeLike && !isLiked ? 'already-like' : ''
             }`}
             onClick={handleLikeBtn}
-          ></div>
+            onKeyDown={handleLikeBtn}
+          ></button>
         </div>
       </div>
       <div

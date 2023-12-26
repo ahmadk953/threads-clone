@@ -51,13 +51,6 @@ const ThreadCard = ({
   likes = [],
   isComment = false,
 }: Props) => {
-  function getRandomLikeCount(min: number, max: number): number {
-    const range = max - min;
-    const randomValue = Math.random();
-    const randomNumber = min + Math.floor(randomValue * range);
-    return randomNumber;
-  }
-
   // Regular expression to match hashtags
   const hashtagRegex = /#(\w+)/g;
 
@@ -80,7 +73,7 @@ const ThreadCard = ({
 
   const likeData = {
     threadId: id,
-    userId: userId || '',
+    userId: userId ?? '',
     likeCount: likes || [],
   };
 
@@ -118,9 +111,9 @@ const ThreadCard = ({
             <p className='mt-2 text-small-regular text-light-2'>{plainText}</p>
             <div className='flex flex-wrap gap-x-1'>
               {hashtags.length
-                ? hashtags.map((tag: string, index: number) => (
+                ? Array.from(new Set(hashtags)).map((tag: string) => (
                     <span
-                      key={index}
+                      key={tag}
                       className='text-small-regular text-primary-500'
                     >
                       #{tag}
