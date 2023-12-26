@@ -231,48 +231,51 @@ export const getThreads = async (page = 1, limit = 10): Promise<any> => {
   }
 };
 
-export async function fetchThreadById(threadId: string) {
+export const fetchThreadById = async (
+  userId: string,
+  limit: number = 10,
+  page: number = 1
+): Promise<any> => {
   connectToDB();
 
   try {
-    const thread = await Thread.findById(threadId)
-      .populate({
-        path: 'author',
-        model: User,
-        select: '_id id name image',
-      }) // Populate the author field with _id and username
+    const skipCount = (page - 1) * limit;
+    const threadsQuery = await Thread.find({ author: userId })
+      .sort({ createdAt: 'desc' })
+      .limit(limit)
+      .skip(skipCount)
+      .populate({ path: 'author', model: User })
       .populate({
         path: 'community',
         model: Community,
-        select: '_id id name image',
-      }) // Populate the community field with _id and name
-      .populate({
-        path: 'children', // Populate the children field
-        populate: [
-          {
-            path: 'author', // Populate the author field within children
-            model: User,
-            select: '_id id name parentId image', // Select only _id and username fields of the author
-          },
-          {
-            path: 'children', // Populate the children field within children
-            model: Thread, // The model of the nested children (assuming it's the same "Thread" model)
-            populate: {
-              path: 'author', // Populate the author field within nested children
-              model: User,
-              select: '_id id name parentId image', // Select only _id and username fields of the author
-            },
-          },
-        ],
       })
-      .exec();
+      .populate({
+        path: 'children',
+        populate: {
+          path: 'author',
+          model: User,
+          select: '_id name parentId image',
+        },
+      });
+    const totalThreads = await Thread.countDocuments({
+      parentId: { $in: [null, undefined] },
+    });
 
-    return thread;
-  } catch (err) {
-    console.error('Error while fetching thread:', err);
-    throw new Error('Unable to fetch thread');
+    // const threads = await threadsQuery.exec();
+
+    const isNext = totalThreads > skipCount + threadsQuery.length;
+
+    return { threads: JSON.parse(JSON.stringify(threadsQuery)), isNext };
+
+    // return threads;
+  } catch (error) {
+    if (error instanceof Error) {
+      throw new Error(`Couldn't get thread: ${error.message}`);
+    } else {
+      throw new Error(`An unknown error occurred`);
+    }
   }
-}
+};
 
 export const fetchThreadsByCommunityId = async (
   communityId: string,

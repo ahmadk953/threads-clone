@@ -4,11 +4,12 @@ import { redirect } from 'next/navigation';
 
 import { profileTabs } from '@/constants';
 
-import ThreadsTab from '@/components/shared/ThreadsTab';
+import UserThreadsContainer from '@/components/containers/UserThreadsContainer';
 import ProfileHeader from '@/components/shared/ProfileHeader';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
 import { fetchUser } from '@/lib/actions/user.actions';
+import { fetchThreadById } from '@/lib/actions/thread.actions';
 
 async function Page({ params }: Readonly<{ params: { id: string } }>) {
   const user = await currentUser();
@@ -16,6 +17,19 @@ async function Page({ params }: Readonly<{ params: { id: string } }>) {
 
   const userInfo = await fetchUser(params.id);
   if (!userInfo?.onboarded) redirect('/onboarding');
+  const { threads: posts, isNext } = await fetchThreadById(
+    userInfo._id || '',
+    10,
+    1
+  );
+
+  type Post = (typeof posts)[0];
+  const threadData = {
+    userId: user.id,
+    userInfoId: userInfo._id,
+    initialPosts: posts,
+    isNext,
+  };
 
   return (
     <section>
@@ -57,11 +71,9 @@ async function Page({ params }: Readonly<{ params: { id: string } }>) {
               className='w-full text-light-1'
             >
               {/* @ts-ignore */}
-              <ThreadsTab
-                currentUserId={user.id}
-                accountId={userInfo.id}
-                accountType='User'
-              />
+              <section className='mt-9 flex flex-col gap-10'>
+                <UserThreadsContainer threadData={threadData} />
+              </section>
             </TabsContent>
           ))}
         </Tabs>
