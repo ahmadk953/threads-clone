@@ -4,17 +4,35 @@ import { currentUser } from '@clerk/nextjs';
 import { communityTabs } from '@/constants';
 
 import UserCard from '@/components/cards/UserCard';
-import ThreadsTab from '@/components/shared/ThreadsTab';
+import CommunityThreadsContainer from '@/components/containers/CommunityThreadsContainer';
 import ProfileHeader from '@/components/shared/ProfileHeader';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
 import { fetchCommunityDetails } from '@/lib/actions/community.actions';
+import { fetchThreadsByCommunityId } from '@/lib/actions/thread.actions';
+import { fetchUser } from '@/lib/actions/user.actions';
+import { redirect } from 'next/navigation';
 
 async function Page({ params }: Readonly<{ params: { username: string } }>) {
   const user = await currentUser();
   if (!user) return null;
+  const userInfo = await fetchUser(user.id);
+  if (!userInfo?.onboarded) redirect('/onboarding');
 
   const communityDetails = await fetchCommunityDetails(null, params.username);
+  const { threads: posts, isNext } = await fetchThreadsByCommunityId(
+    communityDetails._id,
+    10,
+    1
+  );
+
+  const threadData = {
+    userId: user.id,
+    userInfoId: userInfo._id,
+    communityId: communityDetails._id,
+    initialPosts: posts,
+    isNext,
+  };
 
   return (
     <section>
@@ -53,11 +71,9 @@ async function Page({ params }: Readonly<{ params: { username: string } }>) {
           </TabsList>
 
           <TabsContent value='threads' className='w-full text-light-1'>
-            <ThreadsTab
-              currentUserId={user.id}
-              accountId={communityDetails._id}
-              accountType='Community'
-            />
+            <section className='mt-9 flex flex-col gap-10'>
+              <CommunityThreadsContainer threadData={threadData} />
+            </section>
           </TabsContent>
 
           <TabsContent value='members' className='mt-9 w-full text-light-1'>
@@ -76,11 +92,7 @@ async function Page({ params }: Readonly<{ params: { username: string } }>) {
           </TabsContent>
 
           <TabsContent value='requests' className='w-full text-light-1'>
-            <ThreadsTab
-              currentUserId={user.id}
-              accountId={communityDetails._id}
-              accountType='Community'
-            />
+            <p className='no-result my-6'> Work-In-Progress </p>
           </TabsContent>
         </Tabs>
       </div>
