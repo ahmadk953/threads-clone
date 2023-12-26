@@ -231,7 +231,53 @@ export const getThreads = async (page = 1, limit = 10): Promise<any> => {
   }
 };
 
-export const fetchThreadById = async (
+export const getThreadById = async (threadId: string): Promise<any> => {
+  connectToDB();
+
+  try {
+    const thread = await Thread.findById(threadId)
+      .populate({
+        path: 'author',
+        model: User,
+        select: '_id id name image',
+      })
+      .populate({
+        path: 'community',
+        model: Community,
+        select: '_id id name image',
+      })
+      .populate({
+        path: 'children',
+        populate: [
+          {
+            path: 'author',
+            model: User,
+            select: '_id id name parentId image',
+          },
+          {
+            path: 'children',
+            model: Thread,
+            populate: {
+              path: 'author',
+              model: User,
+              select: '_id id name parentId image',
+            },
+          },
+        ],
+      })
+      .exec();
+
+    return thread;
+  } catch (error) {
+    if (error instanceof Error) {
+      throw new Error(`Couldn't get thread: ${error.message}`);
+    } else {
+      throw new Error(`An unknown error occurred`);
+    }
+  }
+};
+
+export const fetchThreadByUserId = async (
   userId: string,
   limit: number = 10,
   page: number = 1
@@ -260,8 +306,6 @@ export const fetchThreadById = async (
     const totalThreads = await Thread.countDocuments({
       parentId: { $in: [null, undefined] },
     });
-
-    // const threads = await threadsQuery.exec();
 
     const isNext = totalThreads > skipCount + threadsQuery.length;
 

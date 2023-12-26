@@ -3,7 +3,7 @@ import { currentUser } from '@clerk/nextjs';
 import Comment from '@/components/forms/Comment';
 import ThreadCard from '@/components/cards/ThreadCard';
 import { fetchUser } from '@/lib/actions/user.actions';
-import { fetchThreadById } from '@/lib/actions/thread.actions';
+import { getThreadById } from '@/lib/actions/thread.actions';
 
 export const revalidate = 0;
 
@@ -15,7 +15,7 @@ async function page({ params }: { params: { id: string } }) {
 
   const userInfo = await fetchUser(user.id);
   if (!userInfo?.onboarded) redirect('/onboarding');
-  const thread = await fetchThreadById(params.id);
+  const thread = await getThreadById(params.id);
 
   return (
     <section className='relative'>
@@ -42,22 +42,30 @@ async function page({ params }: { params: { id: string } }) {
       </div>
 
       <div className='mt-10'>
-        {(thread.children || []).reverse().map((childItem: any) => (
-          <ThreadCard
-            key={childItem._id}
-            id={childItem._id}
-            currentUserId={user.id}
-            parentId={childItem.parentId}
-            content={childItem.text}
-            author={childItem.author}
-            community={childItem.community}
-            createdAt={childItem.createdAt}
-            comments={childItem.children}
-            likes={childItem.likes}
-            userId={userInfo._id}
-            isComment
-          />
-        ))}
+        {!thread.children || thread.children.length === 0 ? (
+          <p className='no-result'>
+            No Comments Yet. Be the First One to Comment on This Post!
+          </p>
+        ) : (
+          thread.children
+            .reverse()
+            .map((childItem: any) => (
+              <ThreadCard
+                key={childItem._id}
+                id={childItem._id}
+                currentUserId={user.id}
+                parentId={childItem.parentId}
+                content={childItem.text}
+                author={childItem.author}
+                community={childItem.community}
+                createdAt={childItem.createdAt}
+                comments={childItem.children}
+                likes={childItem.likes}
+                userId={userInfo._id}
+                isComment
+              />
+            ))
+        )}
       </div>
     </section>
   );

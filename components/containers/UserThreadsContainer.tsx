@@ -1,5 +1,5 @@
 'use client';
-import { fetchThreadById } from '@/lib/actions/thread.actions';
+import { fetchThreadByUserId } from '@/lib/actions/thread.actions';
 import React, { useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import ThreadCard, { Author, Community } from '@/components/cards/ThreadCard';
@@ -33,7 +33,7 @@ const UserThreadsContainer = ({ threadData }: Props) => {
 
   async function fetchMorePosts() {
     const next = page + 1;
-    const { threads: newPosts, isNext: newIsNext } = await fetchThreadById(
+    const { threads: newPosts, isNext: newIsNext } = await fetchThreadByUserId(
       threadData.userInfoId || '',
       10,
       next

@@ -9,7 +9,7 @@ import ProfileHeader from '@/components/shared/ProfileHeader';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
 import { fetchUser } from '@/lib/actions/user.actions';
-import { fetchThreadById } from '@/lib/actions/thread.actions';
+import { fetchThreadByUserId } from '@/lib/actions/thread.actions';
 
 async function Page({ params }: Readonly<{ params: { id: string } }>) {
   const user = await currentUser();
@@ -17,7 +17,7 @@ async function Page({ params }: Readonly<{ params: { id: string } }>) {
 
   const userInfo = await fetchUser(params.id);
   if (!userInfo?.onboarded) redirect('/onboarding');
-  const { threads: posts, isNext } = await fetchThreadById(
+  const { threads: posts, isNext } = await fetchThreadByUserId(
     userInfo._id || '',
     10,
     1
