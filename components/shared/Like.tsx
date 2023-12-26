@@ -24,7 +24,7 @@ const Like = ({ likeCount, threadId, userId }: Props) => {
       setBeforeLiked(false);
     }
     return undefined;
-  }, []);
+  }, [isLiked, likeCount, userId]);
 
   const handleLikeBtn = async () => {
     try {
@@ -52,13 +52,12 @@ const Like = ({ likeCount, threadId, userId }: Props) => {
     <div className='flex items-center gap-3 text-gray-1 duration-200 ease-in-out hover:text-[red]'>
       <div title={isLiked ? 'Unlike' : 'Like'} className='like-parent'>
         <div className='heart-container'>
-          <button
+          <div
             className={`heart-icon ${!beforeLike && isLiked ? 'liked' : ''} ${
               beforeLike && !isLiked ? 'already-like' : ''
             }`}
             onClick={handleLikeBtn}
-            onKeyDown={handleLikeBtn}
-          ></button>
+          ></div>
         </div>
       </div>
       <div

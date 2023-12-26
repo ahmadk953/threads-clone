@@ -1,62 +1,36 @@
+import { fetchUser } from '@/lib/actions/user.actions';
 import { currentUser } from '@clerk/nextjs';
 import { redirect } from 'next/navigation';
+import type { Metadata } from 'next';
+import { fetchPost } from './actions';
+import ThreadsContainer from '@/components/containers/ThreadsContainer';
 
-import ThreadCard from '@/components/cards/ThreadCard';
-import Pagination from '@/components/shared/Pagination';
+export const metadata: Metadata = {
+  title: 'Home | Threads',
+  manifest: '/manifest.json',
+};
 
-import { fetchPosts } from '@/lib/actions/thread.actions';
-import { fetchUser } from '@/lib/actions/user.actions';
-
-async function Home({
-  searchParams,
-}: Readonly<{
-  searchParams: { [key: string]: string | undefined };
-}>) {
+export default async function Home() {
   const user = await currentUser();
   if (!user) return null;
-
-  const userInfo = await fetchUser(user.id);
+  const userInfo = await fetchUser(user?.id);
   if (!userInfo?.onboarded) redirect('/onboarding');
 
-  const result = await fetchPosts(
-    searchParams.page ? +searchParams.page : 1,
-    30
-  );
+  const { posts, isNext } = await fetchPost({ page: 1, limit: 10 });
+
+  const threadData = {
+    userId: user.id,
+    userInfoId: userInfo._id,
+    initialPosts: posts,
+    isNext,
+  };
 
   return (
     <>
-      <h1 className='head-text text-left'>Home</h1>
-
-      <section className='mt-9 flex flex-col gap-10'>
-        {result.posts.length === 0 ? (
-          <p className='no-result'>No threads found</p>
-        ) : (
-          <>
-            {result.posts.map((post) => (
-              <ThreadCard
-                key={post._id}
-                id={post._id}
-                currentUserId={user.id}
-                parentId={post.parentId}
-                userId={userInfo._id}
-                content={post.text}
-                author={post.author}
-                community={post.community}
-                createdAt={post.createdAt}
-                comments={post.children}
-              />
-            ))}
-          </>
-        )}
+      <h2 className='head-text text-left'>Home</h2>
+      <section className='mt-6 flex flex-col gap-8'>
+        <ThreadsContainer threadData={threadData} />
       </section>
-
-      <Pagination
-        path='/'
-        pageNumber={searchParams?.page ? +searchParams.page : 1}
-        isNext={result.isNext}
-      />
     </>
   );
 }
-
-export default Home;
