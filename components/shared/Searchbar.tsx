@@ -25,7 +25,7 @@ function Searchbar({ routeType }: Readonly<Props>) {
     }, 300);
 
     return () => clearTimeout(delayDebounceFn);
-  }, [search, routeType]);
+  }, [search, routeType, router]);
 
   return (
     <div className='searchbar'>

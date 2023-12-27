@@ -24,7 +24,7 @@ const fetcher = (url: string, headers: HeadersInit) =>
 
 const Page: NextPage = () => {
   const { organization } = useOrganization();
-  const currentOrg = organization?.id || '';
+  const currentOrg = organization?.id ?? '';
 
   const { data, error } = useSWR<CommunityData, any>(
     '/api/communities',

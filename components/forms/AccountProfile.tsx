@@ -24,6 +24,7 @@ import { isBase64Image } from '@/lib/utils';
 
 import { UserValidation } from '@/lib/validations/user';
 import { updateUser } from '@/lib/actions/user.actions';
+import { updateCommunityInfo } from '@/lib/actions/community.actions';
 
 interface Props {
   user: {
@@ -62,22 +63,34 @@ const AccountProfile = ({ user, btnTitle, type }: Props) => {
     if (hasImageChanged) {
       const imgRes = await startUpload(files);
 
-      if (imgRes && imgRes[0].url) {
+      if (imgRes?.[0]?.url) {
         values.profile_photo = imgRes[0].url;
       }
     }
 
-    await updateUser({
-      name: values.name,
-      path: pathname,
-      username: values.username,
-      userId: user.id,
-      bio: values.bio,
-      image: values.profile_photo,
-    });
+    if (type !== 'Community') {
+      await updateUser({
+        name: values.name,
+        path: pathname,
+        username: values.username,
+        userId: user.id,
+        bio: values.bio,
+        image: values.profile_photo,
+      });
+    } else {
+      await updateCommunityInfo(
+        user.id,
+        values.name,
+        values.username,
+        values.profile_photo,
+        values.bio
+      );
+    }
 
     if (pathname === '/profile/edit') {
-      router.back();
+      router.push(`/profile/${user.id}`);
+    } else if (pathname === '/communities/edit') {
+      router.push(`/communities/${values.username}`);
     } else {
       router.push('/');
     }
