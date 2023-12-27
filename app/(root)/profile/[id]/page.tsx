@@ -4,7 +4,7 @@ import { redirect } from 'next/navigation';
 
 import { profileTabs } from '@/constants';
 
-import UserThreadsContainer from '@/components/containers/UserThreadsContainer';
+import ThreadsContainer from '@/components/containers/ThreadsContainer';
 import ProfileHeader from '@/components/shared/ProfileHeader';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
@@ -29,6 +29,7 @@ async function Page({ params }: Readonly<{ params: { id: string } }>) {
     userInfoId: userInfo._id,
     initialPosts: posts,
     isNext,
+    isUser: true,
   };
 
   return (
@@ -72,7 +73,7 @@ async function Page({ params }: Readonly<{ params: { id: string } }>) {
             >
               {/* @ts-ignore */}
               <section className='mt-9 flex flex-col gap-10'>
-                <UserThreadsContainer threadData={threadData} />
+                <ThreadsContainer threadData={threadData} />
               </section>
             </TabsContent>
           ))}

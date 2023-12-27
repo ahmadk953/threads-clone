@@ -16,6 +16,7 @@ export type Community = {
   id: string;
   name: string;
   image: string;
+  username: string;
 } | null;
 
 type Comment = {
@@ -189,7 +190,7 @@ const ThreadCard = ({
 
       {!isComment && community && (
         <Link
-          href={`/communities/${community.id}`}
+          href={`/communities/${community.username}`}
           className='mt-5 flex items-center'
         >
           <p className='text-subtle-medium text-gray-1'>

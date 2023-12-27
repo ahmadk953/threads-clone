@@ -4,7 +4,7 @@ import { currentUser } from '@clerk/nextjs';
 import { communityTabs } from '@/constants';
 
 import UserCard from '@/components/cards/UserCard';
-import CommunityThreadsContainer from '@/components/containers/CommunityThreadsContainer';
+import ThreadsContainer from '@/components/containers/ThreadsContainer';
 import ProfileHeader from '@/components/shared/ProfileHeader';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
@@ -32,6 +32,7 @@ async function Page({ params }: Readonly<{ params: { username: string } }>) {
     communityId: communityDetails._id,
     initialPosts: posts,
     isNext,
+    isUser: false,
   };
 
   return (
@@ -72,7 +73,7 @@ async function Page({ params }: Readonly<{ params: { username: string } }>) {
 
           <TabsContent value='threads' className='w-full text-light-1'>
             <section className='mt-9 flex flex-col gap-10'>
-              <CommunityThreadsContainer threadData={threadData} />
+              <ThreadsContainer threadData={threadData} />
             </section>
           </TabsContent>
 

@@ -8,6 +8,52 @@ import User from '../models/user.model';
 import Thread from '../models/thread.model';
 import Community from '../models/community.model';
 
+const populateThread = [
+  {
+    path: 'author',
+    model: User,
+    select: '_id id name image',
+  },
+  {
+    path: 'community',
+    model: Community,
+    select: '_id id name image',
+  },
+  {
+    path: 'children',
+    populate: [
+      {
+        path: 'author',
+        model: User,
+        select: '_id id name parentId image',
+      },
+      {
+        path: 'children',
+        model: Thread,
+        populate: {
+          path: 'author',
+          model: User,
+          select: '_id id name parentId image',
+        },
+      },
+    ],
+  },
+];
+
+const populateAuthorAndCommunity = (query: any) => {
+  return populateThread.reduce((currentQuery, option) => {
+    return currentQuery.populate(option);
+  }, query);
+};
+
+function handleError(error: unknown, customMessage: string): never {
+  if (error instanceof Error) {
+    throw new Error(`${customMessage}: ${error.message}`);
+  } else {
+    throw new Error(`An unknown error occurred`);
+  }
+}
+
 export async function fetchPosts(pageNumber = 1, pageSize = 20) {
   connectToDB();
 
@@ -88,8 +134,8 @@ export async function createThread({
     }
 
     revalidatePath(path);
-  } catch (error: any) {
-    throw new Error(`Failed to create thread: ${error.message}`);
+  } catch (error) {
+    handleError(error, 'Failed to create thread');
   }
 }
 
@@ -156,8 +202,8 @@ export async function deleteThread(id: string, path: string): Promise<void> {
     );
 
     revalidatePath(path);
-  } catch (error: any) {
-    throw new Error(`Failed to delete thread: ${error.message}`);
+  } catch (error) {
+    handleError(error, 'Failed to delete thread');
   }
 }
 
@@ -180,12 +226,8 @@ export const likeToThread = async (
 
     await thread.save();
     revalidatePath(path);
-  } catch (error: any) {
-    if (error instanceof Error) {
-      throw new Error(`Can't add like to thread: ${error.message}`);
-    } else {
-      throw new Error(`An unknown error occurred: ${error.message}`);
-    }
+  } catch (error) {
+    handleError(error, 'Failed to add like thread');
   }
 };
 
@@ -223,11 +265,7 @@ export const getThreads = async (page = 1, limit = 10): Promise<any> => {
 
     return { threads: JSON.parse(JSON.stringify(threads)), isNext };
   } catch (error) {
-    if (error instanceof Error) {
-      throw new Error(`Couldn't get threads: ${error.message}`);
-    } else {
-      throw new Error(`An unknown error occurred`);
-    }
+    handleError(error, 'Failed to get threads');
   }
 };
 
@@ -235,45 +273,14 @@ export const getThreadById = async (threadId: string): Promise<any> => {
   connectToDB();
 
   try {
-    const thread = await Thread.findById(threadId)
-      .populate({
-        path: 'author',
-        model: User,
-        select: '_id id name image',
-      })
-      .populate({
-        path: 'community',
-        model: Community,
-        select: '_id id name image',
-      })
-      .populate({
-        path: 'children',
-        populate: [
-          {
-            path: 'author',
-            model: User,
-            select: '_id id name parentId image',
-          },
-          {
-            path: 'children',
-            model: Thread,
-            populate: {
-              path: 'author',
-              model: User,
-              select: '_id id name parentId image',
-            },
-          },
-        ],
-      })
-      .exec();
-
+    const threadQuery = Thread.findById(threadId);
+    const thread = await populateAuthorAndCommunity(threadQuery);
+    if (!thread) {
+      throw new Error('Thread not found');
+    }
     return thread;
   } catch (error) {
-    if (error instanceof Error) {
-      throw new Error(`Couldn't get thread: ${error.message}`);
-    } else {
-      throw new Error(`An unknown error occurred`);
-    }
+    handleError(error, 'Failed to get thread by its id');
   }
 };
 
@@ -286,38 +293,25 @@ export const fetchThreadByUserId = async (
 
   try {
     const skipCount = (page - 1) * limit;
-    const threadsQuery = await Thread.find({ author: userId })
+    const threadsQuery = Thread.find({ author: userId })
       .sort({ createdAt: 'desc' })
       .limit(limit)
-      .skip(skipCount)
-      .populate({ path: 'author', model: User })
-      .populate({
-        path: 'community',
-        model: Community,
-      })
-      .populate({
-        path: 'children',
-        populate: {
-          path: 'author',
-          model: User,
-          select: '_id name parentId image',
-        },
-      });
+      .skip(skipCount);
+
+    const populatedThreadsQuery =
+      await populateAuthorAndCommunity(threadsQuery).exec();
     const totalThreads = await Thread.countDocuments({
       parentId: { $in: [null, undefined] },
     });
 
-    const isNext = totalThreads > skipCount + threadsQuery.length;
+    const isNext = totalThreads > skipCount + populatedThreadsQuery.length;
 
-    return { threads: JSON.parse(JSON.stringify(threadsQuery)), isNext };
-
-    // return threads;
+    return {
+      threads: JSON.parse(JSON.stringify(populatedThreadsQuery)),
+      isNext,
+    };
   } catch (error) {
-    if (error instanceof Error) {
-      throw new Error(`Couldn't get thread: ${error.message}`);
-    } else {
-      throw new Error(`An unknown error occurred`);
-    }
+    handleError(error, 'Failed to get threads by userId');
   }
 };
 
@@ -355,11 +349,7 @@ export const fetchThreadsByCommunityId = async (
     return { threads: JSON.parse(JSON.stringify(threadsQuery)), isNext };
     // return threads;
   } catch (error) {
-    if (error instanceof Error) {
-      throw new Error(`Couldn't get thread: ${error.message}`);
-    } else {
-      throw new Error(`An unknown error occurred`);
-    }
+    handleError(error, 'Failed to get threads by communityId');
   }
 };
 
@@ -396,8 +386,7 @@ export async function addCommentToThread(
     await originalThread.save();
 
     revalidatePath(path);
-  } catch (err) {
-    console.error('Error while adding comment:', err);
-    throw new Error('Unable to add comment');
+  } catch (error) {
+    handleError(error, 'Failed to add comment to thread');
   }
 }

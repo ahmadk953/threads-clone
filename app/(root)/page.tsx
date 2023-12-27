@@ -23,6 +23,7 @@ export default async function Home() {
     userInfoId: userInfo._id,
     initialPosts: posts,
     isNext,
+    isUser: false,
   };
 
   return (

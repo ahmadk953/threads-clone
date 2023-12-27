@@ -1,5 +1,7 @@
 'use client';
 import { getThreads } from '@/lib/actions/thread.actions';
+import { fetchThreadByUserId } from '@/lib/actions/thread.actions';
+import { fetchThreadsByCommunityId } from '@/lib/actions/thread.actions';
 import React, { useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import ThreadCard, { Author, Community } from '@/components/cards/ThreadCard';
@@ -22,6 +24,8 @@ type Props = {
     isNext: boolean;
     userId: string;
     userInfoId: string;
+    isUser: boolean;
+    communityId?: string;
   };
 };
 
@@ -33,16 +37,26 @@ const ThreadsContainer = ({ threadData }: Props) => {
 
   async function fetchMorePosts() {
     const next = page + 1;
-    const { threads: newPosts, isNext: newIsNext } = await getThreads(next, 10);
+
+    let { threads: newPosts, isNext: newIsNext } = await getThreads(next, 10);
+
+    if (threadData.isUser) {
+      ({ threads: newPosts, isNext: newIsNext } = await fetchThreadByUserId(
+        threadData.userInfoId || '',
+        10,
+        next
+      ));
+    } else if (threadData.communityId) {
+      ({ threads: newPosts, isNext: newIsNext } =
+        await fetchThreadsByCommunityId(threadData.communityId, next, 10));
+    }
 
     if (newPosts?.length) {
-      setPosts((prev: any) => {
-        return [...prev, ...newPosts];
-      });
+      setPosts((prev: any) => [...prev, ...newPosts]);
       setPage(page + 1);
       setIsNext(newIsNext);
     } else {
-      return setIsNext(false);
+      setIsNext(false);
     }
   }
   useEffect(() => {
