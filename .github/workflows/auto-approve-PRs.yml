@@ -1,6 +1,7 @@
-name: Auto Approve and Merge Dependabot PRs
+name: Auto approve and merge dependabot PRs
 
 on:
+  workflow_dispatch:
   pull_request_target:
     types:
       - opened
