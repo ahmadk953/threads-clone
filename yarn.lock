@@ -1024,25 +1024,34 @@
   resolved "https://registry.yarnpkg.com/@ungap/structured-clone/-/structured-clone-1.2.0.tgz#756641adb587851b5ccb3e095daf27ae581c8406"
   integrity sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==
 
+"@uploadthing/dropzone@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@uploadthing/dropzone/-/dropzone-0.1.1.tgz#d84834e6f6c73ad22574055017bb4ca7bc45d0f3"
+  integrity sha512-ohlnFQfNr/UmImfipVo4uiBj1HQL7dp/sWBD96iAajc6RaQuYnHATGaSaISpCjZTeoLkksuu4/LR8vU9nSzpvQ==
+  dependencies:
+    attr-accept "^2.2.2"
+    file-selector "^0.6.0"
+
 "@uploadthing/mime-types@^0.2.2":
   version "0.2.2"
   resolved "https://registry.yarnpkg.com/@uploadthing/mime-types/-/mime-types-0.2.2.tgz#94ec59c61729f6bef5662d8b222831e8afd59369"
   integrity sha512-ZUo1JHOPPMZDsUw1mOhhVDIvJGlsjj6T0xJ/YJtulyJwL43S9B5pxg1cHcRuTEgjaxj7B55jiqQ6r9mDrrjH9A==
 
-"@uploadthing/react@^6.1.0":
-  version "6.1.0"
-  resolved "https://registry.yarnpkg.com/@uploadthing/react/-/react-6.1.0.tgz#fc4ce36e8a05c0dbfce4d87ecf8a68c66c217fa8"
-  integrity sha512-UCck0Jd6wJvvmVMMjlOzgGQghEvWv8Pw+IWxsWMvrD/UHiZX7cWc7TgVy88tiAdtuvgatCLfoOsemBMAIhTFdw==
+"@uploadthing/react@^6.2.0":
+  version "6.2.0"
+  resolved "https://registry.yarnpkg.com/@uploadthing/react/-/react-6.2.0.tgz#412e1e01b49ee4e29a14e7c855632ed708a65cfc"
+  integrity sha512-DTD4R9OaVH/UDbs+J/s2UFMjNVQfHA+FCjAUEoa1JgTXQUfP8HvpOl8pCMcLqWx555e98bZrSgw50LjsOWGS0A==
   dependencies:
-    "@uploadthing/shared" "^6.0.3"
+    "@uploadthing/dropzone" "^0.1.1"
+    "@uploadthing/shared" "^6.1.0"
     attr-accept "^2.2.2"
     file-selector "^0.6.0"
     tailwind-merge "^1.13.2"
 
-"@uploadthing/shared@^6.0.3":
-  version "6.0.3"
-  resolved "https://registry.yarnpkg.com/@uploadthing/shared/-/shared-6.0.3.tgz#24fcc11c57ce1dd2827e567f7c91b2141f3b638c"
-  integrity sha512-gATWAg7cClqatJMDDaP0s9krijrsY5193ymRZDNkNbi0H8uH70/pP2W/7blV5dRNn6lwHJqL2LaHNcUounBd5Q==
+"@uploadthing/shared@^6.0.3", "@uploadthing/shared@^6.1.0":
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/@uploadthing/shared/-/shared-6.1.0.tgz#8c859b1ee9909ddf3f0747d2dea7b18e7e5b350c"
+  integrity sha512-pZNTqq/3QbAnLF6wRKAa9lM7MxdP057z3W3E6vZiHnhmwmdMllJpaVs3TWqe0wbSy6jcDDRLhDCuU/Vvr2KsZw==
 
 acorn-jsx@^5.3.2:
   version "5.3.2"
