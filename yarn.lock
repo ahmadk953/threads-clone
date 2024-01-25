@@ -1037,21 +1037,23 @@
   resolved "https://registry.yarnpkg.com/@uploadthing/mime-types/-/mime-types-0.2.2.tgz#94ec59c61729f6bef5662d8b222831e8afd59369"
   integrity sha512-ZUo1JHOPPMZDsUw1mOhhVDIvJGlsjj6T0xJ/YJtulyJwL43S9B5pxg1cHcRuTEgjaxj7B55jiqQ6r9mDrrjH9A==
 
-"@uploadthing/react@^6.2.0":
-  version "6.2.0"
-  resolved "https://registry.yarnpkg.com/@uploadthing/react/-/react-6.2.0.tgz#412e1e01b49ee4e29a14e7c855632ed708a65cfc"
-  integrity sha512-DTD4R9OaVH/UDbs+J/s2UFMjNVQfHA+FCjAUEoa1JgTXQUfP8HvpOl8pCMcLqWx555e98bZrSgw50LjsOWGS0A==
+"@uploadthing/react@^6.2.1":
+  version "6.2.1"
+  resolved "https://registry.yarnpkg.com/@uploadthing/react/-/react-6.2.1.tgz#0899c345dbeaed670d6d3eb09cf9e3be4d7dc69b"
+  integrity sha512-EPyOtxEyD/alcp5DSHjI1GkcAVRgI8EonUYn1xVSCQCJLXv0CctuPpKJhpVD5UuZwcBW9qBY37NwTK3Ac67fRg==
   dependencies:
     "@uploadthing/dropzone" "^0.1.1"
-    "@uploadthing/shared" "^6.1.0"
+    "@uploadthing/shared" "^6.2.0"
     attr-accept "^2.2.2"
     file-selector "^0.6.0"
     tailwind-merge "^1.13.2"
 
-"@uploadthing/shared@^6.0.3", "@uploadthing/shared@^6.1.0":
-  version "6.1.0"
-  resolved "https://registry.yarnpkg.com/@uploadthing/shared/-/shared-6.1.0.tgz#8c859b1ee9909ddf3f0747d2dea7b18e7e5b350c"
-  integrity sha512-pZNTqq/3QbAnLF6wRKAa9lM7MxdP057z3W3E6vZiHnhmwmdMllJpaVs3TWqe0wbSy6jcDDRLhDCuU/Vvr2KsZw==
+"@uploadthing/shared@^6.0.3", "@uploadthing/shared@^6.2.0":
+  version "6.2.0"
+  resolved "https://registry.yarnpkg.com/@uploadthing/shared/-/shared-6.2.0.tgz#5a3e77def7e6dc65afe77589a5afd08d567ee459"
+  integrity sha512-GMC1gwZa9X48RZwuY7gGse7E8TXYMAMUNaYWEQL2ctVhMZv7viCPyMyZ0yMqBsQmOeGfbmycPnUeNE9IuesJGg==
+  dependencies:
+    std-env "^3.7.0"
 
 acorn-jsx@^5.3.2:
   version "5.3.2"
@@ -3672,6 +3674,11 @@ sparse-bitfield@^3.0.3:
   integrity sha512-kvzhi7vqKTfkh0PZU+2D2PIllw2ymqJKujUcyPMd9Y75Nv4nPbGJZXNhxsgdQab2BmlDct1YnfQCguEvHr7VsQ==
   dependencies:
     memory-pager "^1.0.2"
+
+std-env@^3.7.0:
+  version "3.7.0"
+  resolved "https://registry.yarnpkg.com/std-env/-/std-env-3.7.0.tgz#c9f7386ced6ecf13360b6c6c55b8aaa4ef7481d2"
+  integrity sha512-JPbdCEQLj1w5GilpiHAx3qJvFndqybBysA3qUOnznweH4QbNYUsW/ea8QzSrnh0vNsezMMw5bcVool8lM0gwzg==
 
 streamsearch@^1.1.0:
   version "1.1.0"
