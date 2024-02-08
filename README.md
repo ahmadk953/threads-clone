@@ -12,7 +12,7 @@ Documentation for this project can be found at the [Wiki](https://github.com/ahm
 
 ## How to Access the Site
 
-You can access the site by going to [the website](https://monumental-flan-fa9272.netlify.app/).
+You can access the site by going to [the website](https://threads-clone-one-chi.vercel.app/).
 
 ## Credits & Resources
 
