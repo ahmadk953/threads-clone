@@ -5,6 +5,7 @@ import { ClerkProvider } from '@clerk/nextjs';
 import { dark } from '@clerk/themes';
 
 import '../globals.css';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -25,6 +26,7 @@ export default function RootLayout({
       }}
     >
       <html lang='en'>
+        <SpeedInsights />
         <body className={`${inter.className} bg-dark-1`}>{children}</body>
       </html>
     </ClerkProvider>

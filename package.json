@@ -24,6 +24,7 @@
     "@types/react": "18.2.55",
     "@types/react-dom": "18.2.19",
     "@uploadthing/react": "^6.2.2",
+    "@vercel/speed-insights": "^1.0.9",
     "autoprefixer": "10.4.17",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
