@@ -27,7 +27,11 @@ export default function RootLayout({
     >
       <html lang='en'>
         <SpeedInsights />
-        <body className={`${inter.className} bg-dark-1`}>{children}</body>
+        <body
+          className={`${inter.className} flex min-h-screen min-w-full flex-col items-center justify-center bg-dark-1`}
+        >
+          {children}
+        </body>
       </html>
     </ClerkProvider>
   );
