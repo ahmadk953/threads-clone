@@ -1083,7 +1083,7 @@
     file-selector "^0.6.0"
     tailwind-merge "^1.14.0"
 
-"@uploadthing/shared@^6.3.0", "@uploadthing/shared@^6.3.1":
+"@uploadthing/shared@^6.3.1":
   version "6.3.1"
   resolved "https://registry.yarnpkg.com/@uploadthing/shared/-/shared-6.3.1.tgz#2a38d283f53942fc811f41a55eea58e141986697"
   integrity sha512-4RH1ZD/FuVxU/wYstx5VGR20ZGEWi4NlTRUCufFsllRurwKcT9spf1mMcZjKwm0hQ0fPGj1mXjh6UouormZ8jA==
@@ -3865,10 +3865,10 @@ svix-fetch@^3.0.0:
     node-fetch "^2.6.1"
     whatwg-fetch "^3.4.1"
 
-svix@^1.18.0:
-  version "1.18.0"
-  resolved "https://registry.yarnpkg.com/svix/-/svix-1.18.0.tgz#1db242200742f9fe4aea63c00674900e1891078f"
-  integrity sha512-JvF8ymN83erBaWjFcRvoCH+jesx8E6Ag2Sb2gDcN1g0g4xMZBuMIu3dX8NxI+laPdXiIdiQrFoWCs0xDf5w2mA==
+svix@^1.19.0:
+  version "1.19.0"
+  resolved "https://registry.yarnpkg.com/svix/-/svix-1.19.0.tgz#91bcf67fb031040b825582bab5133c2593f78ce8"
+  integrity sha512-kDP9hVJ3pKpcGai8tCv1pEGd72WGsHbKABwlf5ipnl8ux5IlOOdEL7ErMEcUZe4diBV7Qp8H3v8Y9oM8ZE8sTA==
   dependencies:
     "@stablelib/base64" "^1.0.0"
     es6-promise "^4.2.4"
