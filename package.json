@@ -20,7 +20,7 @@
     "@radix-ui/react-label": "^2.0.2",
     "@radix-ui/react-slot": "^1.0.2",
     "@radix-ui/react-tabs": "^1.0.4",
-    "@types/node": "20.11.20",
+    "@types/node": "20.11.22",
     "@types/react": "18.2.60",
     "@types/react-dom": "18.2.19",
     "@uploadthing/react": "^6.2.4",
