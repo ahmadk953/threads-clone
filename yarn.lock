@@ -1059,12 +1059,11 @@
   resolved "https://registry.yarnpkg.com/@ungap/structured-clone/-/structured-clone-1.2.0.tgz#756641adb587851b5ccb3e095daf27ae581c8406"
   integrity sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==
 
-"@uploadthing/dropzone@^0.1.3":
-  version "0.1.3"
-  resolved "https://registry.yarnpkg.com/@uploadthing/dropzone/-/dropzone-0.1.3.tgz#b7af698f0d36d51984e8baa8aebbc2b850b2f619"
-  integrity sha512-wwN9V9v6cJIZTPP8JdG9/768T8odez8aqYsGqEqGqlop+hU9iI6qZqNJqF3t7X+RXGwvK2kcFSST2ePkpdHYJQ==
+"@uploadthing/dropzone@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@uploadthing/dropzone/-/dropzone-0.2.0.tgz#4f66ace596ebb1a3e0eacd440f48394ab726fdfb"
+  integrity sha512-bqPdU15xknka6+QoUMLx8134vO1Ude18qst9FAVx1N3BSjAqlGRhvJCjWJ3yoE/ENi5nGi0zuOLM2aSQgG2dOg==
   dependencies:
-    attr-accept "^2.2.2"
     file-selector "^0.6.0"
 
 "@uploadthing/mime-types@^0.2.4":
@@ -1072,18 +1071,18 @@
   resolved "https://registry.yarnpkg.com/@uploadthing/mime-types/-/mime-types-0.2.4.tgz#ee2a7f62ccf7aeb18b504de0813caad5ad8cf4a2"
   integrity sha512-P8rcS++LA8x9DTcL5FFAY7FB4z4frSWaSKztxv2duT4Mea/GxZe9pAXyMWX+ZfGYbt3n12SlSfvV28ZvC5XLqw==
 
-"@uploadthing/react@^6.2.4":
-  version "6.2.4"
-  resolved "https://registry.yarnpkg.com/@uploadthing/react/-/react-6.2.4.tgz#7dda0163aa046460665ea50ad89048688dc85c8c"
-  integrity sha512-PswliOTzNfyVybccr7ybiUVZbozUT3IjHY0gBIuaTlAdB3cz4H3jk0egW3vzyXap9RvCB1z2ukff54T36k5nRQ==
+"@uploadthing/react@^6.3.2":
+  version "6.3.2"
+  resolved "https://registry.yarnpkg.com/@uploadthing/react/-/react-6.3.2.tgz#5070eda3d57ba4f5bc969141672017543cee18ac"
+  integrity sha512-jFB80vA1BakdMsKJJ2JuGY/sbPBY6WzFFlPRPlUse0nbp2OisnEKSN5PRt3ceXmNn3ButiQOdnMDZAyK4WP5vw==
   dependencies:
-    "@uploadthing/dropzone" "^0.1.3"
-    "@uploadthing/shared" "^6.3.1"
+    "@uploadthing/dropzone" "^0.2.0"
+    "@uploadthing/shared" "^6.3.2"
     attr-accept "^2.2.2"
     file-selector "^0.6.0"
-    tailwind-merge "^1.14.0"
+    tailwind-merge "^2.2.1"
 
-"@uploadthing/shared@^6.3.1", "@uploadthing/shared@^6.3.2":
+"@uploadthing/shared@^6.3.2":
   version "6.3.2"
   resolved "https://registry.yarnpkg.com/@uploadthing/shared/-/shared-6.3.2.tgz#e283fa3d14bdf933c16d9874f04e101cd6e1134a"
   integrity sha512-jt4+gEQRriUGYDnVfj6qIXzSvAp3NnJ11cOUAQSRcnvlTIFv02sTit2/JAldLa8KJNur+mM1bBUTkkdXRcVIxg==
@@ -3890,11 +3889,6 @@ swr@^2.2.5:
   dependencies:
     client-only "^0.0.1"
     use-sync-external-store "^1.2.0"
-
-tailwind-merge@^1.14.0:
-  version "1.14.0"
-  resolved "https://registry.yarnpkg.com/tailwind-merge/-/tailwind-merge-1.14.0.tgz#e677f55d864edc6794562c63f5001f45093cdb8b"
-  integrity sha512-3mFKyCo/MBcgyOTlrY8T7odzZFx+w+qKSMAmdFzRvqBfLlSigU6TZnlFHK0lkMwj9Bj8OYU+9yW9lmGuS0QEnQ==
 
 tailwind-merge@^2.2.1:
   version "2.2.1"
