@@ -23,7 +23,7 @@
     "@types/node": "20.11.22",
     "@types/react": "18.2.61",
     "@types/react-dom": "18.2.19",
-    "@uploadthing/react": "^6.2.4",
+    "@uploadthing/react": "^6.3.2",
     "@vercel/speed-insights": "^1.0.10",
     "autoprefixer": "10.4.17",
     "class-variance-authority": "^0.7.0",
