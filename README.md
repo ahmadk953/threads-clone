@@ -10,9 +10,9 @@ The Roadmap for this project can be found by visiting the [repo's project page](
 
 Documentation for this project can be found at the [Wiki](https://github.com/ahmadk953/threads-clone/wiki)
 
-## How to Access the Site
+## Accessing the Site
 
-You can access the site by going to [the website](https://threads-clone-one-chi.vercel.app/).
+You can access the site by going to [the vercel link](https://threads-clone-one-chi.vercel.app/).
 
 ## Credits & Resources
 
