@@ -1063,10 +1063,10 @@
   dependencies:
     file-selector "^0.6.0"
 
-"@uploadthing/mime-types@^0.2.4":
-  version "0.2.4"
-  resolved "https://registry.yarnpkg.com/@uploadthing/mime-types/-/mime-types-0.2.4.tgz#ee2a7f62ccf7aeb18b504de0813caad5ad8cf4a2"
-  integrity sha512-P8rcS++LA8x9DTcL5FFAY7FB4z4frSWaSKztxv2duT4Mea/GxZe9pAXyMWX+ZfGYbt3n12SlSfvV28ZvC5XLqw==
+"@uploadthing/mime-types@0.2.7":
+  version "0.2.7"
+  resolved "https://registry.yarnpkg.com/@uploadthing/mime-types/-/mime-types-0.2.7.tgz#f4d5d7a0faa5afd4bc16fcac1e61c80e6487b638"
+  integrity sha512-HfQpL1GSyLOOnIT4WqVv8aW3HotEpFKuuCnK+dUZThMzeiFs09s9J0wk5/VBwupXvIXQwMiB//bp9aUE2p/mFg==
 
 "@uploadthing/react@^6.3.2":
   version "6.3.2"
@@ -1079,10 +1079,10 @@
     file-selector "^0.6.0"
     tailwind-merge "^2.2.1"
 
-"@uploadthing/shared@^6.3.2":
-  version "6.3.2"
-  resolved "https://registry.yarnpkg.com/@uploadthing/shared/-/shared-6.3.2.tgz#e283fa3d14bdf933c16d9874f04e101cd6e1134a"
-  integrity sha512-jt4+gEQRriUGYDnVfj6qIXzSvAp3NnJ11cOUAQSRcnvlTIFv02sTit2/JAldLa8KJNur+mM1bBUTkkdXRcVIxg==
+"@uploadthing/shared@6.5.0", "@uploadthing/shared@^6.3.2":
+  version "6.5.0"
+  resolved "https://registry.yarnpkg.com/@uploadthing/shared/-/shared-6.5.0.tgz#954deb113aaa674890e1b83773b99e53e8d242a6"
+  integrity sha512-RVzHODev1FRnPSEOih/rTjN89FW9ZXK1uvxSCg+q43cYkUcgJ8mF5LbEmS4dwRqRJkFpspfTPo8IcMe7WwoQ2A==
   dependencies:
     std-env "^3.7.0"
 
@@ -4126,13 +4126,13 @@ update-browserslist-db@^1.0.13:
     escalade "^3.1.1"
     picocolors "^1.0.0"
 
-uploadthing@^6.5.0:
-  version "6.5.0"
-  resolved "https://registry.yarnpkg.com/uploadthing/-/uploadthing-6.5.0.tgz#edd4589c5ab5b4ae26b4bdf57123f5e96abfc6b8"
-  integrity sha512-lW+wOpWQzw2qNCvbuz/cWw4H8tF7dNakuLNVllQbQJFlPniKwPqSXHMGumXEeOdQi4mR20fJH1YPJBq5bof3cg==
+uploadthing@^6.8.0:
+  version "6.8.0"
+  resolved "https://registry.yarnpkg.com/uploadthing/-/uploadthing-6.8.0.tgz#1bfd58a2d72c836255d034cb44c020c5f1eda29c"
+  integrity sha512-89DwCDsLLdF1bhPtCX4TYgl3NCZtyTeixn9hOVUViOIc3R429nJ5sViz2Lr9wz+nN5gW66qaa4qao6E43sN/hA==
   dependencies:
-    "@uploadthing/mime-types" "^0.2.4"
-    "@uploadthing/shared" "^6.3.2"
+    "@uploadthing/mime-types" "0.2.7"
+    "@uploadthing/shared" "6.5.0"
     consola "^3.2.3"
     std-env "^3.7.0"
 
