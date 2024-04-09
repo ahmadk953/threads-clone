@@ -23,7 +23,7 @@
     "@types/node": "20.12.4",
     "@types/react": "18.2.74",
     "@types/react-dom": "18.2.24",
-    "@uploadthing/react": "^6.3.2",
+    "@uploadthing/react": "^6.4.0",
     "autoprefixer": "10.4.19",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
