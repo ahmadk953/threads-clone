@@ -2,6 +2,9 @@
 
 [![CodeQL](https://github.com/ahmadk953/threads-clone/actions/workflows/codeql.yml/badge.svg)](https://github.com/ahmadk953/threads-clone/actions/workflows/codeql.yml)
 
+> [!WARNING]
+> Development on this project is currently paused. No new feature updates are going to pushed, but I will continue to update dependencies via dependabot.
+
 ## Roadmap
 
 The Roadmap for this project can be found by visiting the [repo's project page](https://github.com/users/ahmadk953/projects/2) for this project.
