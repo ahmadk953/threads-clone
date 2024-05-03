@@ -80,10 +80,10 @@
     js-cookie "3.0.1"
     swr "2.2.0"
 
-"@clerk/themes@^2.1.1":
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/@clerk/themes/-/themes-2.1.1.tgz#7c95fc0f72800416255228101816a04a260627e7"
-  integrity sha512-BEd44Muq79M/0FcjO9tdbcw+S0kNVqbVuJK6RpmIAKYy9dOlt4GgIB/QJakn3oG/Zv8yapFxusSNahep/gONrw==
+"@clerk/themes@^2.1.2":
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/@clerk/themes/-/themes-2.1.2.tgz#96fe8e3d30478ab326bf6110de67e2ad90f7cb2a"
+  integrity sha512-amSxjWJGYDOKFQDa+QCSmfyjIzdPo2e5L0PA/GbP40DeBA4x0RAdXQiY8OAtglvLPw21aOWNMqSYWJXIF0SYVQ==
   dependencies:
     "@clerk/types" "4.2.0"
     tslib "2.4.1"
