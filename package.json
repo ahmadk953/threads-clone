@@ -27,7 +27,7 @@
     "autoprefixer": "10.4.19",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
-    "lucide-react": "^0.378.0",
+    "lucide-react": "^0.379.0",
     "millify": "^6.1.0",
     "mongodb-client-encryption": "^6.0.0",
     "mongoose": "^8.4.0",
