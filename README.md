@@ -1,4 +1,4 @@
-# Threads Clone
+# Threads Clone - A Replica of Threads
 
 [![CodeQL](https://github.com/ahmadk953/threads-clone/actions/workflows/codeql.yml/badge.svg)](https://github.com/ahmadk953/threads-clone/actions/workflows/codeql.yml)
 
