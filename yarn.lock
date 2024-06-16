@@ -1132,13 +1132,13 @@
   resolved "https://registry.yarnpkg.com/@uploadthing/mime-types/-/mime-types-0.2.10.tgz#169edb30f1aa52f828e37acfe5121432493efe01"
   integrity sha512-kz3F0oEgAyts25NAGXlUBCWh3mXonbSOQJFGFMawHuIgbUbnzXbe4w5WI+0XdneCbjNmikfWrdWrs8m/7HATfQ==
 
-"@uploadthing/react@^6.5.0":
-  version "6.5.4"
-  resolved "https://registry.yarnpkg.com/@uploadthing/react/-/react-6.5.4.tgz#20f0549b886824d24cded798f9746ee4c8b7c36c"
-  integrity sha512-c1RFZggXqlc4wQ0hnxjgOM+9066NUMOJmUAPG2N7EKYO64/uRrZMpq5CvYdxsKwI0YiCnhIeInct21QvSSEa6Q==
+"@uploadthing/react@^6.6.0":
+  version "6.6.0"
+  resolved "https://registry.yarnpkg.com/@uploadthing/react/-/react-6.6.0.tgz#7b8fe47ea5b8ad1fff958f9b64dd0a5a7d757e3c"
+  integrity sha512-jLN4Oy21d0n8F6CNPl9qjEu0/Q1rnddSxny/02Lm89L/sYuR4RXfk1vBgBGPAGXBak0BO9z5eEmYURLrXXUAJQ==
   dependencies:
     "@uploadthing/dropzone" "0.4.1"
-    "@uploadthing/shared" "6.7.4"
+    "@uploadthing/shared" "6.7.5"
     file-selector "^0.6.0"
     tailwind-merge "^2.2.1"
 
@@ -1147,6 +1147,15 @@
   resolved "https://registry.yarnpkg.com/@uploadthing/shared/-/shared-6.7.4.tgz#5bb3097d1654c45e927133f6008f4aacc052125c"
   integrity sha512-7e35U7/84qQQx+bhldSdze9ODiAo4NCCZiYEV3NomD44O9fE5bfQXcCPtBeXh3y3udf7S28PMZbT6ybJeuKfgw==
   dependencies:
+    effect "^3.1.0"
+    std-env "^3.7.0"
+
+"@uploadthing/shared@6.7.5":
+  version "6.7.5"
+  resolved "https://registry.yarnpkg.com/@uploadthing/shared/-/shared-6.7.5.tgz#9d18959dccd9e9cd8f064be0e0a20fadaadc8942"
+  integrity sha512-BZXzvh6zGEt4ip//mxfXdRTNWYw9XJ6tommL6A1TEo2l8jvdNbUpPUwXnMVWBMwio2b48BO7D9V3siYIKMD4pg==
+  dependencies:
+    "@uploadthing/mime-types" "0.2.10"
     effect "^3.1.0"
     std-env "^3.7.0"
 
