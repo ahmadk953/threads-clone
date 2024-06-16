@@ -1150,6 +1150,15 @@
     effect "^3.1.0"
     std-env "^3.7.0"
 
+"@uploadthing/shared@6.7.5":
+  version "6.7.5"
+  resolved "https://registry.yarnpkg.com/@uploadthing/shared/-/shared-6.7.5.tgz#9d18959dccd9e9cd8f064be0e0a20fadaadc8942"
+  integrity sha512-BZXzvh6zGEt4ip//mxfXdRTNWYw9XJ6tommL6A1TEo2l8jvdNbUpPUwXnMVWBMwio2b48BO7D9V3siYIKMD4pg==
+  dependencies:
+    "@uploadthing/mime-types" "0.2.10"
+    effect "^3.1.0"
+    std-env "^3.7.0"
+
 acorn-jsx@^5.3.2:
   version "5.3.2"
   resolved "https://registry.yarnpkg.com/acorn-jsx/-/acorn-jsx-5.3.2.tgz#7ed5bb55908b3b2f1bc55c6af1653bada7f07937"
@@ -4218,14 +4227,14 @@ update-browserslist-db@^1.0.13:
     escalade "^3.1.1"
     picocolors "^1.0.0"
 
-uploadthing@^6.10.0:
-  version "6.10.4"
-  resolved "https://registry.yarnpkg.com/uploadthing/-/uploadthing-6.10.4.tgz#15af813db798396d75049b4b024bed0176a2b6b6"
-  integrity sha512-0hGO0Q7R7MnxzVkUbYHE6PkwFieYH+UUa905uo7JtA0h3Gpc89bNDFaOfK8634Z66088VRLNVuWxY2FTIqw4sg==
+uploadthing@^6.12.0:
+  version "6.12.0"
+  resolved "https://registry.yarnpkg.com/uploadthing/-/uploadthing-6.12.0.tgz#643d744696d40a80c0a4bad8b0fdcd17bf01b79e"
+  integrity sha512-uoWG1riH6z2IHCcbMo3xnGe6p/+sx2PPOOLOsk5DeqGv5HtlY7ISauFFRXW8H+jdhevZm1n/j4Je/Z+bbIziSg==
   dependencies:
     "@effect/schema" "^0.66.12"
     "@uploadthing/mime-types" "0.2.10"
-    "@uploadthing/shared" "6.7.4"
+    "@uploadthing/shared" "6.7.5"
     consola "^3.2.3"
     effect "^3.1.0"
     fast-check "^3.18.0"
