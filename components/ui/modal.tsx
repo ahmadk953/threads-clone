@@ -1,4 +1,9 @@
-import { Dialog, Transition } from '@headlessui/react';
+import {
+  Dialog,
+  DialogPanel,
+  Transition,
+  TransitionChild,
+} from '@headlessui/react';
 import React, { Fragment, HTMLAttributes, useCallback } from 'react';
 import { twMerge } from 'tailwind-merge';
 
@@ -26,7 +31,7 @@ const Modal = ({ children, className, isOpen, onClose }: ModalProps) => {
               'flex min-h-screen justify-center px-4 py-10 text-center'
             )}
           >
-            <Transition.Child
+            <TransitionChild
               as={Fragment}
               enter='ease-out duration-300'
               enterFrom='opacity-0'
@@ -35,10 +40,10 @@ const Modal = ({ children, className, isOpen, onClose }: ModalProps) => {
               leaveFrom='opacity-100'
               leaveTo='opacity-0'
             >
-              <Dialog.Overlay className='fixed inset-0 bg-dark-1 bg-opacity-50  dark:bg-opacity-75' />
-            </Transition.Child>
+              <div className='fixed inset-0 bg-dark-1 bg-opacity-50 dark:bg-opacity-75' />
+            </TransitionChild>
 
-            <Transition.Child
+            <TransitionChild
               as={Fragment}
               enter='ease-out duration-300'
               enterFrom='opacity-0 scale-95'
@@ -47,9 +52,9 @@ const Modal = ({ children, className, isOpen, onClose }: ModalProps) => {
               leaveFrom='opacity-100 scale-100'
               leaveTo='opacity-0 scale-95'
             >
-              <Dialog.Panel
+              <DialogPanel
                 className={twMerge(
-                  'group relative flex transform  flex-col self-center rounded-md bg-dark-2 text-left text-light-1 shadow-xl transition-all',
+                  'group relative flex transform flex-col self-center rounded-md bg-dark-2 text-left text-light-1 shadow-xl transition-all',
 
                   className
                 )}
@@ -62,8 +67,8 @@ const Modal = ({ children, className, isOpen, onClose }: ModalProps) => {
                 >
                   &#10005;
                 </button>
-              </Dialog.Panel>
-            </Transition.Child>
+              </DialogPanel>
+            </TransitionChild>
           </div>
         </Dialog>
       </Transition>
