@@ -80,12 +80,12 @@
     js-cookie "3.0.1"
     swr "2.2.0"
 
-"@clerk/themes@^2.1.9":
-  version "2.1.9"
-  resolved "https://registry.yarnpkg.com/@clerk/themes/-/themes-2.1.9.tgz#605282679c2e85a000d5241cc423d6849e6910ea"
-  integrity sha512-MAWwVSYlm+hsGlR7bxkY8Wo7eOeOk6qYjeHxNPbKKLM52+/dioOTsHOnhRck2qzFUquBmQ93nHGzvsvQSoCGaQ==
+"@clerk/themes@^2.1.10":
+  version "2.1.10"
+  resolved "https://registry.yarnpkg.com/@clerk/themes/-/themes-2.1.10.tgz#25e9cbd1f398801892409d50223a87a7081f5112"
+  integrity sha512-1XlXVt+AhkiFJ4CXLSmnL7UFCLRLtHe6HV/2haabKpBuLgmleVYXf6dveTJnc8ZnHadGH91bbOz0le4Dl3wByw==
   dependencies:
-    "@clerk/types" "4.6.0"
+    "@clerk/types" "4.6.1"
     tslib "2.4.1"
 
 "@clerk/types@3.65.2":
@@ -95,10 +95,10 @@
   dependencies:
     csstype "3.1.1"
 
-"@clerk/types@4.6.0":
-  version "4.6.0"
-  resolved "https://registry.yarnpkg.com/@clerk/types/-/types-4.6.0.tgz#2dd88a3ee603f4577606ad8ad1a46ae8c70401ec"
-  integrity sha512-kowqVGqLfu0Zl2Pteum70MfkGHqBUoHHeR+u2+yWVl1lKHLCiyY1u8ntYBEIolAylBaQNDuRzxyMIDPSxjPE8g==
+"@clerk/types@4.6.1":
+  version "4.6.1"
+  resolved "https://registry.yarnpkg.com/@clerk/types/-/types-4.6.1.tgz#f439a053c17e115a39c7c1fbff8df410cdf8c315"
+  integrity sha512-QFeNKPYDmTJ88l5QYG0SPwbABk42wRMalW3M/wAtr+wnQxBCXyX2XRZe9h4g2rH1VF+wG4Xe56abeeD+xE4iEw==
   dependencies:
     csstype "3.1.1"
 
