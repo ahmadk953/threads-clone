@@ -33,7 +33,7 @@ function PostThread({ userId }: Readonly<Props>) {
   const router = useRouter();
   const pathname = usePathname();
 
-  const { startUpload } = useUploadThing('media');
+  const { startUpload } = useUploadThing('imageUploader');
 
   const [files, setFiles] = useState<File[]>([]);
 
@@ -64,7 +64,7 @@ function PostThread({ userId }: Readonly<Props>) {
       if (hasImageChanged) {
         const imgRes = await startUpload(files);
 
-        if (imgRes?.[0]?.url) {
+        if (imgRes && imgRes[0].url) {
           values.image = imgRes[0].url;
         }
       }
@@ -91,7 +91,7 @@ function PostThread({ userId }: Readonly<Props>) {
 
     if (e.target.files && e.target.files.length > 0) {
       const file = e.target.files[0];
-      setFiles(Array.from(e.target.files));
+      setFiles([file]);
 
       if (!file.type.includes('image')) return;
 
