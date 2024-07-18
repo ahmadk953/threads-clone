@@ -143,12 +143,12 @@ const ShareModal = ({ postId, postContent, postTags }: Props) => {
               readOnly
               ref={inputRef}
               value={postURL}
-              className='account-form_input no-focus px-6  py-8'
+              className='account-form_input no-focus px-6 py-8'
             />
-            <div className=' absolute bottom-1 right-1 top-1 flex items-center justify-center bg-dark-3 py-2 pl-4 pr-2'>
+            <div className='absolute bottom-1 right-1 top-1 flex items-center justify-center bg-dark-3 py-2 pl-4 pr-2'>
               <Button
                 onClick={handleCopyBtn}
-                className=' rounded-md bg-primary-500 px-8 py-2 !text-small-regular text-light-1 hover:bg-primary-500 max-xs:w-full'
+                className='rounded-md bg-primary-500 px-8 py-2 !text-small-regular text-light-1 hover:bg-primary-500 max-xs:w-full'
               >
                 {isCopied ? 'Copied' : 'Copy'}
               </Button>

@@ -1,7 +1,7 @@
 import { fetchCommunityDetails } from '@/lib/actions/community.actions';
 import { NextResponse } from 'next/server';
 import { headers } from 'next/headers';
-import { currentUser } from '@clerk/nextjs';
+import { currentUser } from '@clerk/nextjs/server';
 
 export async function GET() {
   const header = headers();

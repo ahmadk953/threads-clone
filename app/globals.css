@@ -137,6 +137,10 @@
 .no-focus {
   @apply focus-visible:ring-0 focus-visible:ring-transparent focus-visible:ring-offset-0 !important;
 }
+/* Thread Creation */
+.thread-form_image-label {
+  @apply flex h-24 w-24 items-center justify-center bg-dark-4 !important;
+}
 
 /* Account Profile  */
 .account-form_image-label {

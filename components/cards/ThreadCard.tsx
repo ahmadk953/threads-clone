@@ -124,7 +124,7 @@ const ThreadCard = ({
             </div>
 
             <div className={`${isComment && 'mb-10'} mt-5 flex flex-col gap-3`}>
-              <div className='flex items-center  gap-2 md:gap-3.5'>
+              <div className='flex items-center gap-2 md:gap-3.5'>
                 {/* Like Component  */}
                 <Like {...likeData} />
                 <Link
