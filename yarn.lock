@@ -1324,12 +1324,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:22.0.0":
-  version: 22.0.0
-  resolution: "@types/node@npm:22.0.0"
+"@types/node@npm:22.0.1":
+  version: 22.0.1
+  resolution: "@types/node@npm:22.0.1"
   dependencies:
     undici-types: "npm:~6.11.1"
-  checksum: 10c0/af26a8ec7266c857b0ced75dc3a93c6b65280d1fa40d1b4488c814d30831c5c752489c99ecb5698daec1376145b1a9ddd08350882dc2e07769917a5f22a460bc
+  checksum: 10c0/15498122770dc9476391c59302cb4635091a05c334bfa462db151b490e5bbed66a989d1e56b2662ec44897ba3d74a338ddfd59b4cd039839d995e40056ab632b
   languageName: node
   linkType: hard
 
@@ -6110,7 +6110,7 @@ __metadata:
     "@radix-ui/react-label": "npm:^2.1.0"
     "@radix-ui/react-slot": "npm:^1.1.0"
     "@radix-ui/react-tabs": "npm:^1.1.0"
-    "@types/node": "npm:22.0.0"
+    "@types/node": "npm:22.0.1"
     "@types/react": "npm:18.3.3"
     "@types/react-dom": "npm:18.3.0"
     "@typescript-eslint/eslint-plugin": "npm:^8.0.0"
