@@ -9,7 +9,7 @@ The Roadmap for this project can be found by visiting the [repo's project page](
 
 ## Documentation
 
-Documentation for this project can be found at the [Wiki](https://github.com/ahmadk953/threads-clone/wiki)
+Documentation for this project can be found at the [Wiki](https://github.com/ahmadk953/threads-clone/wiki) _Coming Soon_
 
 ## Accessing the Site
 
