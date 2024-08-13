@@ -96,13 +96,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@clerk/themes@npm:^2.1.19":
-  version: 2.1.19
-  resolution: "@clerk/themes@npm:2.1.19"
+"@clerk/themes@npm:^2.1.20":
+  version: 2.1.20
+  resolution: "@clerk/themes@npm:2.1.20"
   dependencies:
-    "@clerk/types": "npm:4.13.0"
+    "@clerk/types": "npm:4.13.1"
     tslib: "npm:2.4.1"
-  checksum: 10c0/b553c8059a6811a76b56e46e48efc80c62e2d973cc138f2c37836f1956cc29767b5ad6ba0decb948465f9f9a0613f6cab09b9575076a80bfba2a48e608116f6e
+  checksum: 10c0/371d228b70b356cbb9e0d9992f1827a4f927bac6f0ae5b8916d30fbd677286f3d4388567631a5d030eaf93a4ddda86ffd7e6ade214e34b5954ab9734c476eb14
   languageName: node
   linkType: hard
 
@@ -112,6 +112,15 @@ __metadata:
   dependencies:
     csstype: "npm:3.1.1"
   checksum: 10c0/c6c1529d03c9658621e2f1b587d0a9ef998a1dadf3e51e6e1da03b381052596bfe1869c1e277284105c2941a99bb0b20b41d9cbce2bcd33002138bd01581ba46
+  languageName: node
+  linkType: hard
+
+"@clerk/types@npm:4.13.1":
+  version: 4.13.1
+  resolution: "@clerk/types@npm:4.13.1"
+  dependencies:
+    csstype: "npm:3.1.1"
+  checksum: 10c0/2931e925f462fc182553713cf41591a7df6fa7c8b74a097c2779ca6d0e71be284272973a738001ee46db8547c3c09da7ccfdab14edb4d389d8e2187711e8f017
   languageName: node
   linkType: hard
 
@@ -6079,7 +6088,7 @@ __metadata:
   resolution: "threads@workspace:."
   dependencies:
     "@clerk/nextjs": "npm:^5.3.0"
-    "@clerk/themes": "npm:^2.1.19"
+    "@clerk/themes": "npm:^2.1.20"
     "@headlessui/react": "npm:^2.1.2"
     "@hookform/resolvers": "npm:^3.9.0"
     "@microsoft/eslint-formatter-sarif": "npm:^3.1.0"
