@@ -4270,15 +4270,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mongodb-client-encryption@npm:^6.0.1":
-  version: 6.0.1
-  resolution: "mongodb-client-encryption@npm:6.0.1"
+"mongodb-client-encryption@npm:^6.1.0":
+  version: 6.1.0
+  resolution: "mongodb-client-encryption@npm:6.1.0"
   dependencies:
     bindings: "npm:^1.5.0"
     node-addon-api: "npm:^4.3.0"
     node-gyp: "npm:latest"
     prebuild-install: "npm:^7.1.2"
-  checksum: 10c0/7757db9b1325f7066f21030b2e88d0016c220f9c81957d081c63ed134df5ba1b513c2fb6c1d6dd1fb275b6f35f9e71a0580e6010eb5b8af0fa55d9549473db40
+  checksum: 10c0/6b94929a0914400bf945b38428f0e8be285476eab5cfeed00db5c3958ea3432ac191d7905ace2d7dc9981c8c724908d7bf4add2e54ce5a43fb40ded6487cbcc3
   languageName: node
   linkType: hard
 
@@ -6111,7 +6111,7 @@ __metadata:
     eslint-config-prettier: "npm:^9.1.0"
     lucide-react: "npm:^0.427.0"
     millify: "npm:^6.1.0"
-    mongodb-client-encryption: "npm:^6.0.1"
+    mongodb-client-encryption: "npm:^6.1.0"
     mongoose: "npm:^8.5.2"
     next: "npm:^14.2.5"
     postcss: "npm:8.4.41"
