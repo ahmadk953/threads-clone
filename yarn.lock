@@ -5933,16 +5933,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"svix@npm:^1.29.0":
-  version: 1.29.0
-  resolution: "svix@npm:1.29.0"
+"svix@npm:^1.30.0":
+  version: 1.30.0
+  resolution: "svix@npm:1.30.0"
   dependencies:
     "@stablelib/base64": "npm:^1.0.0"
     es6-promise: "npm:^4.2.4"
     fast-sha256: "npm:^1.3.0"
     svix-fetch: "npm:^3.0.0"
     url-parse: "npm:^1.4.3"
-  checksum: 10c0/8598c0f7d281237f4733867a0006a968bf313da83d7f8b5e2e3ba935be7c93748e330af8279e5085a43c2b23f78d64bc50bb2aa089ee506914822eff873c530e
+  checksum: 10c0/2f3801ac0729928cbc3bc5999f4c59998a03870723d43ac112d2d369d312ec1dc41c5af134320fffbf994015fa53a7efedefd6e3a46be055f77a01914cede21a
   languageName: node
   linkType: hard
 
@@ -6133,7 +6133,7 @@ __metadata:
     react-intersection-observer: "npm:^9.13.0"
     react-share: "npm:^5.1.0"
     sharp: "npm:^0.33.5"
-    svix: "npm:^1.29.0"
+    svix: "npm:^1.30.0"
     swr: "npm:^2.2.5"
     tailwind-merge: "npm:^2.5.2"
     tailwindcss: "npm:3.4.10"
