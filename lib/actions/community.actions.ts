@@ -128,7 +128,9 @@ export async function fetchCommunities({
     // If the search string is not empty, add the $or operator to match either username or name fields.
     if (searchString.trim() !== '') {
       query.$or = [
+        // @ts-ignore
         { username: { $regex: regex } },
+        // @ts-ignore
         { name: { $regex: regex } },
       ];
     }
