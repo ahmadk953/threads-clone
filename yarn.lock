@@ -1682,22 +1682,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@uploadthing/react@npm:^6.7.2":
-  version: 6.7.2
-  resolution: "@uploadthing/react@npm:6.7.2"
+"@uploadthing/react@npm:^6.8.0":
+  version: 6.8.0
+  resolution: "@uploadthing/react@npm:6.8.0"
   dependencies:
     "@uploadthing/dropzone": "npm:0.4.1"
-    "@uploadthing/shared": "npm:6.7.8"
+    "@uploadthing/shared": "npm:6.7.9"
     file-selector: "npm:^0.6.0"
     tailwind-merge: "npm:^2.2.1"
   peerDependencies:
     next: "*"
     react: ^17.0.2 || ^18.0.0
-    uploadthing: 6.13.2
+    uploadthing: 6.13.3
   peerDependenciesMeta:
     next:
       optional: true
-  checksum: 10c0/7455eed3dadc4ba8b6a6395b30a1be7361a11bfa98b75a83cab000498fe0dcb6e6c9d7bf9acf9154d61c517437616ddc5c091c9de9df2b3bfb9be3a7cee44783
+  checksum: 10c0/be0e3d36c2730578f35a74d4b085d02abe970a1ecb8c8855742e7a471a81f449308b4dc046c38fb4f63935ee3d046a6fed5b08b6c1286b1a334abed3f08b52c3
   languageName: node
   linkType: hard
 
@@ -1709,6 +1709,17 @@ __metadata:
     effect: "npm:3.4.5"
     std-env: "npm:^3.7.0"
   checksum: 10c0/762fd98ce2214f453538ffb0dca7130a00252bbcb2a909be4a1a021c2d356a1f86e475623d77c0ef4e23eb18f0b17d155887870eb2cc535a999cba0d68383baf
+  languageName: node
+  linkType: hard
+
+"@uploadthing/shared@npm:6.7.9":
+  version: 6.7.9
+  resolution: "@uploadthing/shared@npm:6.7.9"
+  dependencies:
+    "@uploadthing/mime-types": "npm:0.2.10"
+    effect: "npm:3.4.8"
+    std-env: "npm:^3.7.0"
+  checksum: 10c0/74b980a28ca1443aa5401f45c2d5821d84fcb7ab363047fc16cc31fcdac78e0808d6155578486e0b98167c84117b9df96bd0be4fe824c0bb9f19ba2f98dd257a
   languageName: node
   linkType: hard
 
@@ -2535,6 +2546,13 @@ __metadata:
   version: 3.4.5
   resolution: "effect@npm:3.4.5"
   checksum: 10c0/a848b3f4be8f7c49d9bf259be1dda53d9883ed062ca18f6f20af5111c4901f964542a44c43910d13b764fe4808dbd6305ad37b18832c811d9783a9cd3296366e
+  languageName: node
+  linkType: hard
+
+"effect@npm:3.4.8":
+  version: 3.4.8
+  resolution: "effect@npm:3.4.8"
+  checksum: 10c0/951962386775fa8506a6bfae75dc2802b00557dc58d9aecc7dff552c2e01ba651b87d662bdbf1f7c5ba1e450bc1a58f6daf44628222b0260471c5b52e0e76a8f
   languageName: node
   linkType: hard
 
@@ -6200,7 +6218,7 @@ __metadata:
     "@types/react-dom": "npm:18.3.0"
     "@typescript-eslint/eslint-plugin": "npm:^8.4.0"
     "@typescript-eslint/parser": "npm:^8.4.0"
-    "@uploadthing/react": "npm:^6.7.2"
+    "@uploadthing/react": "npm:^6.8.0"
     autoprefixer: "npm:10.4.20"
     class-variance-authority: "npm:^0.7.0"
     clsx: "npm:^2.1.1"
