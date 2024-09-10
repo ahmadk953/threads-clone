@@ -115,14 +115,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@effect/schema@npm:0.68.12":
-  version: 0.68.12
-  resolution: "@effect/schema@npm:0.68.12"
+"@effect/schema@npm:0.68.18":
+  version: 0.68.18
+  resolution: "@effect/schema@npm:0.68.18"
   dependencies:
     fast-check: "npm:^3.19.0"
   peerDependencies:
-    effect: ^3.4.5
-  checksum: 10c0/0eb85c3544e2cda7c0c16dd6a63baa569de91cdf7a5e670f4dc7d60ff40e507e8766d4764a5c0f31351ac63a87ba4b1f87a0fede5f19cd5a798b77c1cd94b479
+    effect: ^3.4.8
+  checksum: 10c0/13795760b1d4e1af6b2eaca05b433f12d3911542b0bae66afa2bca381a0b96b1eb063193ab737d03018ceb97e37a44019dbfad3c720b45741310cbf68eee6bd2
   languageName: node
   linkType: hard
 
@@ -1747,17 +1747,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@uploadthing/shared@npm:6.7.8":
-  version: 6.7.8
-  resolution: "@uploadthing/shared@npm:6.7.8"
-  dependencies:
-    "@uploadthing/mime-types": "npm:0.2.10"
-    effect: "npm:3.4.5"
-    std-env: "npm:^3.7.0"
-  checksum: 10c0/762fd98ce2214f453538ffb0dca7130a00252bbcb2a909be4a1a021c2d356a1f86e475623d77c0ef4e23eb18f0b17d155887870eb2cc535a999cba0d68383baf
-  languageName: node
-  linkType: hard
-
 "@uploadthing/shared@npm:6.7.9":
   version: 6.7.9
   resolution: "@uploadthing/shared@npm:6.7.9"
@@ -2585,13 +2574,6 @@ __metadata:
   version: 0.2.0
   resolution: "eastasianwidth@npm:0.2.0"
   checksum: 10c0/26f364ebcdb6395f95124fda411f63137a4bfb5d3a06453f7f23dfe52502905bd84e0488172e0f9ec295fdc45f05c23d5d91baf16bd26f0fe9acd777a188dc39
-  languageName: node
-  linkType: hard
-
-"effect@npm:3.4.5":
-  version: 3.4.5
-  resolution: "effect@npm:3.4.5"
-  checksum: 10c0/a848b3f4be8f7c49d9bf259be1dda53d9883ed062ca18f6f20af5111c4901f964542a44c43910d13b764fe4808dbd6305ad37b18832c811d9783a9cd3296366e
   languageName: node
   linkType: hard
 
@@ -6292,7 +6274,7 @@ __metadata:
     tailwindcss: "npm:3.4.10"
     tailwindcss-animate: "npm:^1.0.7"
     typescript: "npm:5.6.2"
-    uploadthing: "npm:^6.13.2"
+    uploadthing: "npm:^6.13.3"
     zod: "npm:^3.23.8"
   languageName: unknown
   linkType: soft
@@ -6514,15 +6496,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"uploadthing@npm:^6.13.2":
-  version: 6.13.2
-  resolution: "uploadthing@npm:6.13.2"
+"uploadthing@npm:^6.13.3":
+  version: 6.13.3
+  resolution: "uploadthing@npm:6.13.3"
   dependencies:
-    "@effect/schema": "npm:0.68.12"
+    "@effect/schema": "npm:0.68.18"
     "@uploadthing/mime-types": "npm:0.2.10"
-    "@uploadthing/shared": "npm:6.7.8"
+    "@uploadthing/shared": "npm:6.7.9"
     consola: "npm:^3.2.3"
-    effect: "npm:3.4.5"
+    effect: "npm:3.4.8"
     std-env: "npm:^3.7.0"
   peerDependencies:
     "@effect/platform": "*"
@@ -6544,7 +6526,7 @@ __metadata:
       optional: true
     tailwindcss:
       optional: true
-  checksum: 10c0/2a9c47ccd40389d4bee6ee0f96a3e0f165cffe867dd7ba9252a0769cfc792f956fb5b3f1cbc20ce299a6dda4a91003a0363f8c66b1c27f2f4a572c44c640ef94
+  checksum: 10c0/da6fa3580c28ec246ca2b2b15b510f9686d53635a7cec6eaa03b373a530a0afb35e034edaadde04b1ae10af39d88aee8ab3644676764c91dae14813aaefb3063
   languageName: node
   linkType: hard
 
