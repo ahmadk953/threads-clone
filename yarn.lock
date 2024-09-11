@@ -276,9 +276,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@headlessui/react@npm:^2.1.6":
-  version: 2.1.6
-  resolution: "@headlessui/react@npm:2.1.6"
+"@headlessui/react@npm:^2.1.7":
+  version: 2.1.7
+  resolution: "@headlessui/react@npm:2.1.7"
   dependencies:
     "@floating-ui/react": "npm:^0.26.16"
     "@react-aria/focus": "npm:^3.17.1"
@@ -287,7 +287,7 @@ __metadata:
   peerDependencies:
     react: ^18
     react-dom: ^18
-  checksum: 10c0/74b393957ece1f51c4f6efa7a7a8b2da52a63e92ad234a14f3e2f6eb1441227d3f07510149024b5a2d8eb3211cd75e6ff34428184790a2a54551adc6831bf2a6
+  checksum: 10c0/45d4eb094ad5e9972919987a27e0b8ecad4394fd2d5320d1d2954bf30a0bf119a5b6fc410f2a3adad9791e545204b9bd9491f5f189c1ebcad5621b042501f086
   languageName: node
   linkType: hard
 
@@ -6196,7 +6196,7 @@ __metadata:
   dependencies:
     "@clerk/nextjs": "npm:^5.4.1"
     "@clerk/themes": "npm:^2.1.29"
-    "@headlessui/react": "npm:^2.1.6"
+    "@headlessui/react": "npm:^2.1.7"
     "@hookform/resolvers": "npm:^3.9.0"
     "@microsoft/eslint-formatter-sarif": "npm:^3.1.0"
     "@next/eslint-plugin-next": "npm:^14.2.9"
