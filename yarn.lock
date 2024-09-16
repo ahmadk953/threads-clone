@@ -1681,27 +1681,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@uploadthing/mime-types@npm:0.3.0":
-  version: 0.3.0
-  resolution: "@uploadthing/mime-types@npm:0.3.0"
-  checksum: 10c0/7f626b1f883d42e81de56c9b7c947ad2a27877e06162b8881d169079ca282edf1dbb424125734e19cc28e68aa00f3369c189a97962274b2fa80a150b9dd7d4f3
-  languageName: node
-  linkType: hard
-
-"@uploadthing/react@npm:^7.0.1":
-  version: 7.0.1
-  resolution: "@uploadthing/react@npm:7.0.1"
+"@uploadthing/react@npm:^6.8.0":
+  version: 6.8.0
+  resolution: "@uploadthing/react@npm:6.8.0"
   dependencies:
     "@uploadthing/dropzone": "npm:0.4.1"
-    "@uploadthing/shared": "npm:7.0.1"
+    "@uploadthing/shared": "npm:6.7.9"
+    file-selector: "npm:^0.6.0"
+    tailwind-merge: "npm:^2.2.1"
   peerDependencies:
     next: "*"
     react: ^17.0.2 || ^18.0.0
-    uploadthing: 7.0.1
+    uploadthing: 6.13.3
   peerDependenciesMeta:
     next:
       optional: true
-  checksum: 10c0/88ab52836a0c59da6e98e01542165f3ab607d28306bd56d0b4ca866cbd9640060e73951277de4d30c749dffbcf6c2a9831291bdd51c87e073b694e21ba625e49
+  checksum: 10c0/be0e3d36c2730578f35a74d4b085d02abe970a1ecb8c8855742e7a471a81f449308b4dc046c38fb4f63935ee3d046a6fed5b08b6c1286b1a334abed3f08b52c3
   languageName: node
   linkType: hard
 
@@ -1713,17 +1708,6 @@ __metadata:
     effect: "npm:3.4.8"
     std-env: "npm:^3.7.0"
   checksum: 10c0/74b980a28ca1443aa5401f45c2d5821d84fcb7ab363047fc16cc31fcdac78e0808d6155578486e0b98167c84117b9df96bd0be4fe824c0bb9f19ba2f98dd257a
-  languageName: node
-  linkType: hard
-
-"@uploadthing/shared@npm:7.0.1":
-  version: 7.0.1
-  resolution: "@uploadthing/shared@npm:7.0.1"
-  dependencies:
-    "@uploadthing/mime-types": "npm:0.3.0"
-    effect: "npm:3.7.2"
-    sqids: "npm:^0.3.0"
-  checksum: 10c0/68c95df95c090694423f940915004635e6dce6ffdd17722c20396181f39b5d413c3a0cf2d5d57931ee82397cf41e298eedc4154c99adcdf13344dbad2045f841
   languageName: node
   linkType: hard
 
@@ -2550,13 +2534,6 @@ __metadata:
   version: 3.4.8
   resolution: "effect@npm:3.4.8"
   checksum: 10c0/951962386775fa8506a6bfae75dc2802b00557dc58d9aecc7dff552c2e01ba651b87d662bdbf1f7c5ba1e450bc1a58f6daf44628222b0260471c5b52e0e76a8f
-  languageName: node
-  linkType: hard
-
-"effect@npm:3.7.2":
-  version: 3.7.2
-  resolution: "effect@npm:3.7.2"
-  checksum: 10c0/017938f2652b3a96d1b01dd943ddd3752da89207779319cccb8a0f9c55990bf1149be69d6bc0b0dab117d9ac1b02e944931732442a6ce729943985e60b7f13a4
   languageName: node
   linkType: hard
 
@@ -5834,13 +5811,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sqids@npm:^0.3.0":
-  version: 0.3.0
-  resolution: "sqids@npm:0.3.0"
-  checksum: 10c0/2ce528b83f2780166b2e8025ece1e8262ee217ed51ab5656959cb6e1a885eee5b6ea86627ce6b0321d7b0eeb34a2ed455476c01c44e6e55e18cee52b3e1b9eb3
-  languageName: node
-  linkType: hard
-
 "ssri@npm:^10.0.0":
   version: 10.0.6
   resolution: "ssri@npm:10.0.6"
@@ -6076,6 +6046,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"tailwind-merge@npm:^2.2.1":
+  version: 2.4.0
+  resolution: "tailwind-merge@npm:2.4.0"
+  checksum: 10c0/77bd20647d08db78a0bdf7b57d4b904479aee7727f44570f8834d62a1aa56f42d7ae68ac959e3d610c9f188aa164eeefb6c43df4f0c8bb7cfc3418e1575bfecb
+  languageName: node
+  linkType: hard
+
 "tailwind-merge@npm:^2.5.2":
   version: 2.5.2
   resolution: "tailwind-merge@npm:2.5.2"
@@ -6215,7 +6192,7 @@ __metadata:
     "@types/react-dom": "npm:18.3.0"
     "@typescript-eslint/eslint-plugin": "npm:^8.5.0"
     "@typescript-eslint/parser": "npm:^8.5.0"
-    "@uploadthing/react": "npm:^7.0.1"
+    "@uploadthing/react": "npm:^6.8.0"
     autoprefixer: "npm:10.4.20"
     class-variance-authority: "npm:^0.7.0"
     clsx: "npm:^2.1.1"
