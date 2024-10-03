@@ -95,22 +95,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@clerk/themes@npm:^2.1.33":
-  version: 2.1.33
-  resolution: "@clerk/themes@npm:2.1.33"
+"@clerk/themes@npm:^2.1.35":
+  version: 2.1.35
+  resolution: "@clerk/themes@npm:2.1.35"
   dependencies:
-    "@clerk/types": "npm:4.23.0"
+    "@clerk/types": "npm:4.25.0"
     tslib: "npm:2.4.1"
-  checksum: 10c0/bd1b76b754a51a45ab41d1c99de51825d8a620ed94af0eb831104f0ccf4652a1ae95f0f763cb1e8347be18063d659ccfe8a6495817005b3a28a21d333b9f9a25
-  languageName: node
-  linkType: hard
-
-"@clerk/types@npm:4.23.0":
-  version: 4.23.0
-  resolution: "@clerk/types@npm:4.23.0"
-  dependencies:
-    csstype: "npm:3.1.1"
-  checksum: 10c0/9cac485aa02157c2fe9f3bcc9ee6bbe7e175f3e78a9074aa9b0d133c16ea7d9dfa928571395c490974f269b61b529b798e2b650363cf20d30d8afacfb76ab4ec
+  checksum: 10c0/aa2524e670a6aa85705dacb3f85b63827849c3869964741a207f421e6e8f0a69fb1fcddd4716b7872803e25444205f17ab6cbd68482b2996d6c521d785ff6cd5
   languageName: node
   linkType: hard
 
@@ -6187,7 +6178,7 @@ __metadata:
   resolution: "threads@workspace:."
   dependencies:
     "@clerk/nextjs": "npm:^5.7.1"
-    "@clerk/themes": "npm:^2.1.33"
+    "@clerk/themes": "npm:^2.1.35"
     "@headlessui/react": "npm:^2.1.9"
     "@hookform/resolvers": "npm:^3.9.0"
     "@microsoft/eslint-formatter-sarif": "npm:^3.1.0"
