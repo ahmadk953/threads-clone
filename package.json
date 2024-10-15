@@ -12,7 +12,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@clerk/nextjs": "^5.7.2",
+    "@clerk/nextjs": "^5.7.3",
     "@clerk/themes": "^2.1.36",
     "@headlessui/react": "^2.1.10",
     "@hookform/resolvers": "^3.9.0",
