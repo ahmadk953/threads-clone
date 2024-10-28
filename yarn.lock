@@ -114,27 +114,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@effect/platform@npm:0.63.2":
-  version: 0.63.2
-  resolution: "@effect/platform@npm:0.63.2"
+"@effect/platform@npm:0.69.8":
+  version: 0.69.8
+  resolution: "@effect/platform@npm:0.69.8"
   dependencies:
     find-my-way-ts: "npm:^0.1.5"
     multipasta: "npm:^0.2.5"
   peerDependencies:
-    "@effect/schema": ^0.72.2
-    effect: ^3.7.2
-  checksum: 10c0/d57f8ecee6364cad9d50c91023d074b9dd59e8d6b15cb45fb618297bc7763512b24e978cd34a55933807f260430670e35151ed5d0bf91df91d275d6e77837558
-  languageName: node
-  linkType: hard
-
-"@effect/schema@npm:0.72.2":
-  version: 0.72.2
-  resolution: "@effect/schema@npm:0.72.2"
-  dependencies:
-    fast-check: "npm:^3.21.0"
-  peerDependencies:
-    effect: ^3.7.2
-  checksum: 10c0/2431c2a4b08ed0b31b8a6b6f58a8b80f4ff96cb6235a1d3f4377fa270eb15b3ba6801b4f539aff9fa1dcbf2e2d0a8272d89afe9e922df3a06fed558b02ea6764
+    effect: ^3.10.3
+  checksum: 10c0/23028c02a15d8504369d301ed49f42157ebcee2bc4caddf473f35231a725dfa75eb5363add2d686d5dec58bd500559b787a61827d423fb448a6b2dddf65d605c
   languageName: node
   linkType: hard
 
@@ -1695,10 +1683,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@uploadthing/mime-types@npm:0.3.0":
-  version: 0.3.0
-  resolution: "@uploadthing/mime-types@npm:0.3.0"
-  checksum: 10c0/7f626b1f883d42e81de56c9b7c947ad2a27877e06162b8881d169079ca282edf1dbb424125734e19cc28e68aa00f3369c189a97962274b2fa80a150b9dd7d4f3
+"@uploadthing/mime-types@npm:0.3.1":
+  version: 0.3.1
+  resolution: "@uploadthing/mime-types@npm:0.3.1"
+  checksum: 10c0/40acf3ce6427c979e8e8a9fc60169fee35c6b6b504d8ed462d62579f9f57a940c3b0afd9e387cec03247b86772fcfc93ba7539fa07cb43a9698c18dbdff5802f
   languageName: node
   linkType: hard
 
@@ -1732,14 +1720,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@uploadthing/shared@npm:7.0.3":
-  version: 7.0.3
-  resolution: "@uploadthing/shared@npm:7.0.3"
+"@uploadthing/shared@npm:7.1.0":
+  version: 7.1.0
+  resolution: "@uploadthing/shared@npm:7.1.0"
   dependencies:
-    "@uploadthing/mime-types": "npm:0.3.0"
-    effect: "npm:3.7.2"
+    "@uploadthing/mime-types": "npm:0.3.1"
+    effect: "npm:3.10.3"
     sqids: "npm:^0.3.0"
-  checksum: 10c0/bd8c673cb093ad9c2a4b615a486a6bc833d799ff56310a87f5e7b1e63a603811d62a29c67ae731065e6859316f2918654f5fa5f4a381666c0da4d41b57ad5db5
+  checksum: 10c0/655d316470c288a237f6e4c749f45d81ebdaed1b3d2dc6813180fc0e500029874130b2adf9b29681cc395f435c4b4ec4061bb38c6d3abbbbb88af5282c12925c
   languageName: node
   linkType: hard
 
@@ -2640,17 +2628,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"effect@npm:3.10.3":
+  version: 3.10.3
+  resolution: "effect@npm:3.10.3"
+  dependencies:
+    fast-check: "npm:^3.21.0"
+  checksum: 10c0/aa09e50b67c9bf90e4ab11e34d8c9163de46d1ec2baa84ff8ce180f06e3b45798578cb5dca3051bb42596404f8978e24bc912790a984af1921618aef22570ee7
+  languageName: node
+  linkType: hard
+
 "effect@npm:3.4.8":
   version: 3.4.8
   resolution: "effect@npm:3.4.8"
   checksum: 10c0/951962386775fa8506a6bfae75dc2802b00557dc58d9aecc7dff552c2e01ba651b87d662bdbf1f7c5ba1e450bc1a58f6daf44628222b0260471c5b52e0e76a8f
-  languageName: node
-  linkType: hard
-
-"effect@npm:3.7.2":
-  version: 3.7.2
-  resolution: "effect@npm:3.7.2"
-  checksum: 10c0/017938f2652b3a96d1b01dd943ddd3752da89207779319cccb8a0f9c55990bf1149be69d6bc0b0dab117d9ac1b02e944931732442a6ce729943985e60b7f13a4
   languageName: node
   linkType: hard
 
@@ -6711,7 +6701,7 @@ __metadata:
     tailwindcss: "npm:3.4.14"
     tailwindcss-animate: "npm:^1.0.7"
     typescript: "npm:5.6.3"
-    uploadthing: "npm:^7.1.0"
+    uploadthing: "npm:^7.2.0"
     zod: "npm:^3.23.8"
   languageName: unknown
   linkType: soft
@@ -6985,15 +6975,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"uploadthing@npm:^7.1.0":
-  version: 7.1.0
-  resolution: "uploadthing@npm:7.1.0"
+"uploadthing@npm:^7.2.0":
+  version: 7.2.0
+  resolution: "uploadthing@npm:7.2.0"
   dependencies:
-    "@effect/platform": "npm:0.63.2"
-    "@effect/schema": "npm:0.72.2"
-    "@uploadthing/mime-types": "npm:0.3.0"
-    "@uploadthing/shared": "npm:7.0.3"
-    effect: "npm:3.7.2"
+    "@effect/platform": "npm:0.69.8"
+    "@uploadthing/mime-types": "npm:0.3.1"
+    "@uploadthing/shared": "npm:7.1.0"
+    effect: "npm:3.10.3"
   peerDependencies:
     express: "*"
     fastify: "*"
@@ -7011,7 +7000,7 @@ __metadata:
       optional: true
     tailwindcss:
       optional: true
-  checksum: 10c0/2c335fc30b75b2cb26fbed439143cff0caec347b908749e3942aaf2fb3b9492fe8b0e4ca89de5bfe76ca2cd88603b83bb59a8379c6185c9dbe9cc39f24079a25
+  checksum: 10c0/49ee09f7fefd676c02597a618cff98c08b113398571ca9ab5748c69f3b56868e0c99579639aa0e59a496377b5de533b24fc38b65ea2fa95b97d82769f05b78b8
   languageName: node
   linkType: hard
 
