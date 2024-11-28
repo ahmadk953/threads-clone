@@ -1468,7 +1468,7 @@ __metadata:
   resolution: "@types/node@npm:22.10.0"
   dependencies:
     undici-types: "npm:~6.20.0"
-  checksum: 10/e2561e15eaac6261cf828cd7dcd4882a5ce2e10104db4123566b00418acf30e18518e39c7a906682f44118b420c555cc774ac3e0e6f80e37f55884cfe6cf1f78
+  checksum: 10c0/efb3783b6fe74b4300c5bdd4f245f1025887d9b1d0950edae584af58a30d95cc058c10b4b3428f8300e4318468b605240c2ede8fcfb6ead2e0f05bca31e54c1b
   languageName: node
   linkType: hard
 
@@ -5030,7 +5030,7 @@ __metadata:
       optional: true
     socks:
       optional: true
-  checksum: 8/b8e7ab9fb84181cb020b5fef5fedd90a5fc12140e688fa12ba588d523a958bb9f8790bfaceeca9f594171794eda0f56be855d7d0588705db82b3de7bf5e2352c
+  checksum: 10c0/8a92b1a5f0a30b88b80d09a0718ecfb18a4a7f7e77c4b2a7047b57babfec6a29ece09dd375a4f528f0712f1282b39e27f194e75d89a3039fbfda4b1c4f7d3095
   languageName: node
   linkType: hard
 
@@ -5045,7 +5045,7 @@ __metadata:
     mquery: "npm:5.0.0"
     ms: "npm:2.1.3"
     sift: "npm:17.1.3"
-  checksum: 8/4c7016d8d2ee227469b622d2d29c3a794f6b83a401348bfda6ebda311bb9781d88d869bc4c5d2395994f139134aa10ef4e379dee35861438fd0a3304f15e4fae
+  checksum: 10c0/0f1cff992b2df0f24e27a49a15e19cbf356cc6d8de4f070215562ed520f0e712589a4e247e0d7e69778f18cd0d075fedb4b86807adeb3cf90d536c8b58b030e3
   languageName: node
   linkType: hard
 
@@ -5891,15 +5891,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-share@npm:^5.1.0":
-  version: 5.1.0
-  resolution: "react-share@npm:5.1.0"
+"react-share@npm:^5.1.1":
+  version: 5.1.1
+  resolution: "react-share@npm:5.1.1"
   dependencies:
     classnames: "npm:^2.3.2"
     jsonp: "npm:^0.2.1"
   peerDependencies:
     react: ^17 || ^18
-  checksum: 10c0/4d43a54d69bf00d0f2b0e603f156eac0e951d56528f4ed78d76aa9fa7a2655de7735946073c3cd070a0899803887990d6b4882e53bbf868d20ca0898e50845ed
+  checksum: 10c0/f2959d324d456197f29779d95333110fa1f2708ea5859bf0e02efd7ea09346bb12e2577217279162813a75542e11cfcb0159bf5c9718187018dc968efccafdb8
   languageName: node
   linkType: hard
 
@@ -6058,7 +6058,7 @@ __metadata:
     supports-preserve-symlinks-flag: "npm:^1.0.0"
   bin:
     resolve: bin/resolve
-  checksum: 10/f345cd37f56a2c0275e3fe062517c650bb673815d885e7507566df589375d165bbbf4bdb6aa95600a9bc55f4744b81f452b5a63f95b9f10a72787dba3c90890a
+  checksum: 10c0/0446f024439cd2e50c6c8fa8ba77eaa8370b4180f401a96abf3d1ebc770ac51c1955e12764cde449fde3fff480a61f84388e3505ecdbab778f4bef5f8212c729
   languageName: node
   linkType: hard
 
@@ -6071,7 +6071,7 @@ __metadata:
     supports-preserve-symlinks-flag: "npm:^1.0.0"
   bin:
     resolve: bin/resolve
-  checksum: 10/05fa778de9d0347c8b889eb7a18f1f06bf0f801b0eb4610b4871a4b2f22e220900cf0ad525e94f990bb8d8921c07754ab2122c0c225ab4cdcea98f36e64fa4c2
+  checksum: 10c0/78ad6edb8309a2bfb720c2c1898f7907a37f858866ce11a5974643af1203a6a6e05b2fa9c53d8064a673a447b83d42569260c306d43628bff5bb101969708355
   languageName: node
   linkType: hard
 
@@ -6958,7 +6958,7 @@ __metadata:
     react-hook-form: "npm:^7.53.1"
     react-icons: "npm:^5.3.0"
     react-intersection-observer: "npm:^9.13.1"
-    react-share: "npm:^5.1.0"
+    react-share: "npm:^5.1.1"
     sharp: "npm:^0.33.5"
     svix: "npm:^1.37.0"
     swr: "npm:^2.2.5"
@@ -7185,7 +7185,7 @@ __metadata:
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 10/dc4bec403cd33a204b655b1152a096a08e7bad2c931cb59ef8ff26b6f2aa541bf98f09fc157958a60c921b1983a8dde9a85b692f9de60fa8f574fd131e3ae4dd
+  checksum: 10c0/ac8307bb06bbfd08ae7137da740769b7d8c3ee5943188743bb622c621f8ad61d244767480f90fbd840277fbf152d8932aa20c33f867dea1bb5e79b187ca1a92f
   languageName: node
   linkType: hard
 
@@ -7204,7 +7204,7 @@ __metadata:
 "undici-types@npm:~6.20.0":
   version: 6.20.0
   resolution: "undici-types@npm:6.20.0"
-  checksum: 10/583ac7bbf4ff69931d3985f4762cde2690bb607844c16a5e2fbb92ed312fe4fa1b365e953032d469fa28ba8b224e88a595f0b10a449332f83fa77c695e567dbe
+  checksum: 10c0/68e659a98898d6a836a9a59e6adf14a5d799707f5ea629433e025ac90d239f75e408e2e5ff086afc3cace26f8b26ee52155293564593fbb4a2f666af57fc59bf
   languageName: node
   linkType: hard
 
