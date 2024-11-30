@@ -13,7 +13,7 @@
   "private": true,
   "dependencies": {
     "@clerk/nextjs": "^5.7.5",
-    "@clerk/themes": "^2.1.40",
+    "@clerk/themes": "^2.1.48",
     "@headlessui/react": "^2.2.0",
     "@hookform/resolvers": "^3.9.1",
     "@radix-ui/react-dropdown-menu": "^2.1.2",
