@@ -11,7 +11,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { fetchUser } from '@/lib/actions/user.actions';
 import { fetchThreadByUserId } from '@/lib/actions/thread.actions';
 
-async function Page({ params }: Readonly<{ params: { id: string } }>) {
+async function Page(props: Readonly<{ params: { id: string } }>) {
+  const params = await props.params;
   const user = await currentUser();
   if (!user) return null;
 

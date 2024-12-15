@@ -13,7 +13,8 @@ import { fetchThreadsByCommunityId } from '@/lib/actions/thread.actions';
 import { fetchUser } from '@/lib/actions/user.actions';
 import { redirect } from 'next/navigation';
 
-async function Page({ params }: Readonly<{ params: { username: string } }>) {
+async function Page(props: Readonly<{ params: { username: string } }>) {
+  const params = await props.params;
   const user = await currentUser();
   if (!user) return null;
   const userInfo = await fetchUser(user.id);

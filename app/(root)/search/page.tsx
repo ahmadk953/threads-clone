@@ -7,11 +7,12 @@ import Pagination from '@/components/shared/Pagination';
 
 import { fetchUser, fetchUsers } from '@/lib/actions/user.actions';
 
-async function Page({
-  searchParams,
-}: Readonly<{
-  searchParams: { [key: string]: string | undefined };
-}>) {
+async function Page(
+  props: Readonly<{
+    searchParams: { [key: string]: string | undefined };
+  }>
+) {
+  const searchParams = await props.searchParams;
   const user = await currentUser();
   if (!user) return null;
 

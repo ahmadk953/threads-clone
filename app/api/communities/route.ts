@@ -4,7 +4,7 @@ import { headers } from 'next/headers';
 import { currentUser } from '@clerk/nextjs/server';
 
 export async function GET() {
-  const header = headers();
+  const header = await headers();
   const orgId = header.get('organization-id');
   if (!orgId) {
     return new NextResponse(

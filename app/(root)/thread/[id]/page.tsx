@@ -7,7 +7,8 @@ import { getThreadById } from '@/lib/actions/thread.actions';
 
 export const revalidate = 0;
 
-async function page({ params }: { params: { id: string } }) {
+async function page(props: { params: Promise<{ id: string }> }) {
+  const params = await props.params;
   if (!params.id) return null;
 
   const user = await currentUser();

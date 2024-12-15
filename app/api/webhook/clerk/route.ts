@@ -36,7 +36,7 @@ type Event = {
 
 export const POST = async (request: Request) => {
   const payload = await request.json();
-  const header = headers();
+  const header = await headers();
 
   const heads = {
     'svix-id': header.get('svix-id'),
