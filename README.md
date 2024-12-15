@@ -1,6 +1,6 @@
 # Threads Clone - A Replica of Threads
 
-> [!NOTE]
+> [!WARNING]
 > Development on this project is currently paused. No new feature updates are going to pushed, but I will continue to update dependencies and fix major bugs as needed.
 
 ## Roadmap
