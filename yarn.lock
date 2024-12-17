@@ -39,9 +39,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@clerk/nextjs@npm:^6.9.2":
-  version: 6.9.2
-  resolution: "@clerk/nextjs@npm:6.9.2"
+"@clerk/nextjs@npm:^6.9.3":
+  version: 6.9.3
+  resolution: "@clerk/nextjs@npm:6.9.3"
   dependencies:
     "@clerk/backend": "npm:^1.21.2"
     "@clerk/clerk-react": "npm:^5.20.2"
@@ -54,7 +54,7 @@ __metadata:
     next: ^13.5.4 || ^14.0.3 || ^15.0.0
     react: ^18.0.0 || ^19.0.0 || ^19.0.0-0
     react-dom: ^18.0.0 || ^19.0.0 || ^19.0.0-0
-  checksum: 10c0/73de9235dd7ad411596f469a07244f73b12734e6cc9c7f4c8ba04d5441c696cc77dab3af7803ff92b50f2407d08d01d5ca762914134014f83348db38f50b6d62
+  checksum: 10c0/c7c5a45a87f2d949dc042cb723299afe65d9a13e29362ebc1b79575426c71df2e0363cd90313fb161bc7852ea1f04fdb9ccbf7261a65006d0a7bbcaa75756e09
   languageName: node
   linkType: hard
 
@@ -6264,7 +6264,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "threads@workspace:."
   dependencies:
-    "@clerk/nextjs": "npm:^6.9.2"
+    "@clerk/nextjs": "npm:^6.9.3"
     "@clerk/themes": "npm:^2.1.48"
     "@headlessui/react": "npm:^2.2.0"
     "@hookform/resolvers": "npm:^3.9.1"
