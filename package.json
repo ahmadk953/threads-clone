@@ -30,7 +30,7 @@
     "lucide-react": "^0.468.0",
     "millify": "^6.1.0",
     "mongodb-client-encryption": "^6.1.0",
-    "mongoose": "^8.9.1",
+    "mongoose": "^8.9.2",
     "next": "15.1.2",
     "postcss": "8.4.49",
     "react": "^19.0.0",
