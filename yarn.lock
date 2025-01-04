@@ -1715,13 +1715,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@uploadthing/mime-types@npm:0.3.2":
-  version: 0.3.2
-  resolution: "@uploadthing/mime-types@npm:0.3.2"
-  checksum: 10c0/e61338afe6e66e602f3bd227fc6a413dc5099c65df8d3ca88a44ca459695a288c04eb8a10380ed5f947a2584e81256357692d35a81675282635f5381fa05ac83
-  languageName: node
-  linkType: hard
-
 "@uploadthing/mime-types@npm:0.3.4":
   version: 0.3.4
   resolution: "@uploadthing/mime-types@npm:0.3.4"
@@ -1743,17 +1736,6 @@ __metadata:
     next:
       optional: true
   checksum: 10c0/bfcdef6c5e48df13ad8c457fa4de6ca63967c3b37003d6e98ee5da6c72024227bd60d3fc953c13f65847a02b741356963528f32f46daa4122754e463ce159e56
-  languageName: node
-  linkType: hard
-
-"@uploadthing/shared@npm:7.1.3":
-  version: 7.1.3
-  resolution: "@uploadthing/shared@npm:7.1.3"
-  dependencies:
-    "@uploadthing/mime-types": "npm:0.3.2"
-    effect: "npm:3.11.5"
-    sqids: "npm:^0.3.0"
-  checksum: 10c0/034d885a99092c3f88c0f4a5655bcc95d9d804ceff1e9a122e6e111cabe1bc0d93f9d21ed80724203c7ae90dd5bf3fcb659b6052db948f16e3bcb3eeb657811b
   languageName: node
   linkType: hard
 
@@ -6382,7 +6364,7 @@ __metadata:
     tailwindcss: "npm:3.4.17"
     tailwindcss-animate: "npm:^1.0.7"
     typescript: "npm:5.7.2"
-    uploadthing: "npm:^7.4.1"
+    uploadthing: "npm:^7.4.4"
     zod: "npm:^3.23.8"
   languageName: unknown
   linkType: soft
@@ -6610,21 +6592,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"uploadthing@npm:^7.4.1":
-  version: 7.4.1
-  resolution: "uploadthing@npm:7.4.1"
+"uploadthing@npm:^7.4.4":
+  version: 7.4.4
+  resolution: "uploadthing@npm:7.4.4"
   dependencies:
     "@effect/platform": "npm:0.70.7"
     "@standard-schema/spec": "npm:1.0.0-beta.3"
-    "@uploadthing/mime-types": "npm:0.3.2"
-    "@uploadthing/shared": "npm:7.1.3"
+    "@uploadthing/mime-types": "npm:0.3.4"
+    "@uploadthing/shared": "npm:7.1.5"
     effect: "npm:3.11.5"
   peerDependencies:
     express: "*"
-    fastify: "*"
     h3: "*"
-    next: "*"
-    tailwindcss: "*"
+    tailwindcss: ^3.0.0 || ^4.0.0-beta.0
   peerDependenciesMeta:
     express:
       optional: true
@@ -6636,7 +6616,7 @@ __metadata:
       optional: true
     tailwindcss:
       optional: true
-  checksum: 10c0/0b4f4fd18cfddc15caf0ae49616ca282651eec7a599058af06a69254ba9ba2391595d9c5dc6020298f6067a3f866db577e175f4d12b404ae613e82dccb01d791
+  checksum: 10c0/c13d9722f59e6d69b73a7b0d848557202610c34a1c8246b7319a7745838f1fb775e375fc575b33c943eae0af2483a90293af9197210b0aa0b90f31131331c47e
   languageName: node
   linkType: hard
 
