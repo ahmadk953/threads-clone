@@ -3341,7 +3341,7 @@ __metadata:
 
 "fsevents@patch:fsevents@npm%3A~2.3.2#~builtin<compat/fsevents>":
   version: 2.3.3
-  resolution: "fsevents@patch:fsevents@npm%3A2.3.3#~builtin<compat/fsevents>::version=2.3.3&hash=df0bf1"
+  resolution: "fsevents@patch:fsevents@npm%3A2.3.3#~builtin<compat/fsevents>::version=2.3.3&hash=18f3a7"
   dependencies:
     node-gyp: "npm:latest"
   conditions: os=darwin
@@ -5247,16 +5247,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-intersection-observer@npm:^9.13.1":
-  version: 9.14.0
-  resolution: "react-intersection-observer@npm:9.14.0"
+"react-intersection-observer@npm:^9.14.1":
+  version: 9.15.1
+  resolution: "react-intersection-observer@npm:9.15.1"
   peerDependencies:
     react: ^17.0.0 || ^18.0.0 || ^19.0.0
     react-dom: ^17.0.0 || ^18.0.0 || ^19.0.0
   peerDependenciesMeta:
     react-dom:
       optional: true
-  checksum: a91785984525997d01afdeac12538649b8929d6ca44b5e070f02dbf352628f49cce5930a5eaf32fbbecafb0f9577fc1996dcd3328d20b375d3cef54eea028f0e
+  checksum: 8/9769b06f065a246c2e477ad6a4ffeeb66c0c00098f094980f123df4ef1e09067b8d4b9f88d5f8e3a6de747c384b02452d0ac8cb91fff7093c15b8375ae097166
   languageName: node
   linkType: hard
 
@@ -5450,7 +5450,7 @@ __metadata:
 
 "resolve@patch:resolve@npm%3A^1.1.7#~builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.22.4#~builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.22.8#~builtin<compat/resolve>":
   version: 1.22.9
-  resolution: "resolve@patch:resolve@npm%3A1.22.9#~builtin<compat/resolve>::version=1.22.9&hash=c3c19d"
+  resolution: "resolve@patch:resolve@npm%3A1.22.9#~builtin<compat/resolve>::version=1.22.9&hash=07638b"
   dependencies:
     is-core-module: "npm:^2.16.0"
     path-parse: "npm:^1.0.7"
@@ -5463,7 +5463,7 @@ __metadata:
 
 "resolve@patch:resolve@npm%3A^2.0.0-next.5#~builtin<compat/resolve>":
   version: 2.0.0-next.5
-  resolution: "resolve@patch:resolve@npm%3A2.0.0-next.5#~builtin<compat/resolve>::version=2.0.0-next.5&hash=c3c19d"
+  resolution: "resolve@patch:resolve@npm%3A2.0.0-next.5#~builtin<compat/resolve>::version=2.0.0-next.5&hash=07638b"
   dependencies:
     is-core-module: "npm:^2.13.0"
     path-parse: "npm:^1.0.7"
@@ -6310,7 +6310,7 @@ __metadata:
     react-dom: ^19.0.0
     react-hook-form: ^7.54.2
     react-icons: ^5.4.0
-    react-intersection-observer: ^9.13.1
+    react-intersection-observer: ^9.14.1
     react-share: ^5.1.2
     sharp: ^0.33.5
     svix: ^1.39.0
@@ -6488,7 +6488,7 @@ __metadata:
 
 "typescript@patch:typescript@5.7.2#~builtin<compat/typescript>":
   version: 5.7.2
-  resolution: "typescript@patch:typescript@npm%3A5.7.2#~builtin<compat/typescript>::version=5.7.2&hash=d73830"
+  resolution: "typescript@patch:typescript@npm%3A5.7.2#~builtin<compat/typescript>::version=5.7.2&hash=701156"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
