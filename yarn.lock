@@ -80,13 +80,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@clerk/themes@npm:^2.2.3":
-  version: 2.2.3
-  resolution: "@clerk/themes@npm:2.2.3"
+"@clerk/themes@npm:^2.2.33":
+  version: 2.2.33
+  resolution: "@clerk/themes@npm:2.2.33"
   dependencies:
-    "@clerk/types": "npm:^4.40.0"
-    tslib: "npm:2.4.1"
-  checksum: 10c0/93562150b776c3c4fad3d8890806ba9839417abaa28f4035e2642bcfad2d4e8cc2eebaf30e6cb35336a29580c423c977e3b10921de21c89b3052a391f5842356
+    "@clerk/types": "npm:^4.54.1"
+    tslib: "npm:2.8.1"
+  checksum: 10c0/6e5b9f165f6444f04be85accd59acf7883e51ebe319abc3b90c8ae200f71add8df6c46945f7c5acdc94e9fdb12d591e4de81c8b515ad9940a86d7c0f9dc599ad
   languageName: node
   linkType: hard
 
@@ -96,6 +96,15 @@ __metadata:
   dependencies:
     csstype: "npm:3.1.1"
   checksum: 10c0/c76a516af12fc592c910ddd0cc025e68804b906a49f74e6660029bee61da2c26c5ebd59f19402f96f2e6fe022b101b5870e694b1c8dc131ad87205a4d2541ca9
+  languageName: node
+  linkType: hard
+
+"@clerk/types@npm:^4.54.1":
+  version: 4.54.1
+  resolution: "@clerk/types@npm:4.54.1"
+  dependencies:
+    csstype: "npm:3.1.3"
+  checksum: 10c0/58980f2f5878b0199aa4444f013e137d3833ccd682c14a54cf88ec0bfcca89422c4d063092d096eaa2dbe9b479bf9f1aad61a6632d3ad5cff8dc93edda47dc0d
   languageName: node
   linkType: hard
 
@@ -2327,7 +2336,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"csstype@npm:^3.0.2":
+"csstype@npm:3.1.3, csstype@npm:^3.0.2":
   version: 3.1.3
   resolution: "csstype@npm:3.1.3"
   checksum: 10c0/80c089d6f7e0c5b2bd83cf0539ab41474198579584fa10d86d0cafe0642202343cbc119e076a0b1aece191989477081415d66c9fefbf3c957fc2fc4b7009f248
@@ -6277,7 +6286,7 @@ __metadata:
   resolution: "threads@workspace:."
   dependencies:
     "@clerk/nextjs": "npm:^6.9.6"
-    "@clerk/themes": "npm:^2.2.3"
+    "@clerk/themes": "npm:^2.2.33"
     "@headlessui/react": "npm:^2.2.0"
     "@hookform/resolvers": "npm:^3.9.1"
     "@microsoft/eslint-formatter-sarif": "npm:^3.1.0"
@@ -6384,7 +6393,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:^2.0.0, tslib@npm:^2.0.3, tslib@npm:^2.1.0, tslib@npm:^2.4.0, tslib@npm:^2.8.0":
+"tslib@npm:2.8.1, tslib@npm:^2.0.0, tslib@npm:^2.0.3, tslib@npm:^2.1.0, tslib@npm:^2.4.0, tslib@npm:^2.8.0":
   version: 2.8.1
   resolution: "tslib@npm:2.8.1"
   checksum: 10c0/9c4759110a19c53f992d9aae23aac5ced636e99887b51b9e61def52611732872ff7668757d4e4c61f19691e36f4da981cd9485e869b4a7408d689f6bf1f14e62
