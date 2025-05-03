@@ -108,15 +108,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@effect/platform@npm:0.70.7":
-  version: 0.70.7
-  resolution: "@effect/platform@npm:0.70.7"
+"@effect/platform@npm:0.72.0":
+  version: 0.72.0
+  resolution: "@effect/platform@npm:0.72.0"
   dependencies:
     find-my-way-ts: "npm:^0.1.5"
     multipasta: "npm:^0.2.5"
   peerDependencies:
-    effect: ^3.11.5
-  checksum: 10c0/7e4be2bca8f4ad589dbe6d5739aa9e5c4d16bdbddb9ad42cdf7517bb5f29fb1ea187ecd32de1fa422315a032d3dcca33c1f59585efa820e478f1f32534848b70
+    effect: ^3.12.0
+  checksum: 10c0/55e2c5d3f851b2527b833c34b8486a6bf214642c62d9330cc0e5f3746011038613a2848c77b0aa0296ccf505098421c8d384d351050a9ff4b96645d808fc76ff
   languageName: node
   linkType: hard
 
@@ -1378,10 +1378,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@standard-schema/spec@npm:1.0.0-beta.3":
-  version: 1.0.0-beta.3
-  resolution: "@standard-schema/spec@npm:1.0.0-beta.3"
-  checksum: 10c0/ae0a4e2a733d1267998f621b4d769b55350ea1c9da8353997b49bceff383015ce6f86adfc32be6dd522e1bbb3e06c8266b8cb334db4aaffd97f7ee92261deca4
+"@standard-schema/spec@npm:1.0.0-beta.4":
+  version: 1.0.0-beta.4
+  resolution: "@standard-schema/spec@npm:1.0.0-beta.4"
+  checksum: 10c0/f001a08d798fe2eb19e4982fc7707549be2b5d0a61c6f144ace9c85e71eee23a2774d84f83f3b2dea02cb670cbe5cd91c151c0bebbc15d0b7fbcf6b29911e334
   languageName: node
   linkType: hard
 
@@ -1747,6 +1747,17 @@ __metadata:
     effect: "npm:3.11.5"
     sqids: "npm:^0.3.0"
   checksum: 10c0/5ca152805df514a3b304aab645df756cd3f633ff34867cd73743cb765df37ca8426a0d670999dde4144ab89bf75c7a5348a3bd162c9d2775e682f4ab1d846cbb
+  languageName: node
+  linkType: hard
+
+"@uploadthing/shared@npm:7.1.7":
+  version: 7.1.7
+  resolution: "@uploadthing/shared@npm:7.1.7"
+  dependencies:
+    "@uploadthing/mime-types": "npm:0.3.4"
+    effect: "npm:3.12.0"
+    sqids: "npm:^0.3.0"
+  checksum: 10c0/8f6d56b167b024b83cde7c17f5e67cc8dddefc88b31bc8fb7a3a0f9c2707d075f0a24edb8de3c6c3fa368aa32d742544049739c6f6ff609d88e4990cbc0e1fbb
   languageName: node
   linkType: hard
 
@@ -2584,6 +2595,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"effect@npm:3.12.0":
+  version: 3.12.0
+  resolution: "effect@npm:3.12.0"
+  dependencies:
+    fast-check: "npm:^3.23.1"
+  checksum: 10c0/b0719886e39c11c4e5715c8b2b1e8af0c43eb11877b07d1489629b79b7b576a03721bbff4dd6f08a503ee4379aaae874909cb50677f76397bcec8d8999960760
+  languageName: node
+  linkType: hard
+
 "electron-to-chromium@npm:^1.5.73":
   version: 1.5.73
   resolution: "electron-to-chromium@npm:1.5.73"
@@ -3173,7 +3193,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fast-check@npm:^3.21.0":
+"fast-check@npm:^3.21.0, fast-check@npm:^3.23.1":
   version: 3.23.2
   resolution: "fast-check@npm:3.23.2"
   dependencies:
@@ -6365,7 +6385,7 @@ __metadata:
     tailwindcss: "npm:3.4.17"
     tailwindcss-animate: "npm:^1.0.7"
     typescript: "npm:5.7.2"
-    uploadthing: "npm:^7.4.4"
+    uploadthing: "npm:^7.6.0"
     zod: "npm:^3.23.8"
   languageName: unknown
   linkType: soft
@@ -6602,15 +6622,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"uploadthing@npm:^7.4.4":
-  version: 7.4.4
-  resolution: "uploadthing@npm:7.4.4"
+"uploadthing@npm:^7.6.0":
+  version: 7.6.0
+  resolution: "uploadthing@npm:7.6.0"
   dependencies:
-    "@effect/platform": "npm:0.70.7"
-    "@standard-schema/spec": "npm:1.0.0-beta.3"
+    "@effect/platform": "npm:0.72.0"
+    "@standard-schema/spec": "npm:1.0.0-beta.4"
     "@uploadthing/mime-types": "npm:0.3.4"
-    "@uploadthing/shared": "npm:7.1.5"
-    effect: "npm:3.11.5"
+    "@uploadthing/shared": "npm:7.1.7"
+    effect: "npm:3.12.0"
   peerDependencies:
     express: "*"
     h3: "*"
@@ -6626,7 +6646,7 @@ __metadata:
       optional: true
     tailwindcss:
       optional: true
-  checksum: 10c0/c13d9722f59e6d69b73a7b0d848557202610c34a1c8246b7319a7745838f1fb775e375fc575b33c943eae0af2483a90293af9197210b0aa0b90f31131331c47e
+  checksum: 10c0/5e51fbfd3ea00df8567f1cbc10a010740e29d7579a1996fce30155985498d52f4fb4b8a4a868b30a0df02642b8ce845e888079bbae1451d3feae383549b841a2
   languageName: node
   linkType: hard
 
