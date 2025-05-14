@@ -4337,12 +4337,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lucide-react@npm:^0.469.0":
-  version: 0.469.0
-  resolution: "lucide-react@npm:0.469.0"
+"lucide-react@npm:^0.510.0":
+  version: 0.510.0
+  resolution: "lucide-react@npm:0.510.0"
   peerDependencies:
     react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0
-  checksum: 10c0/0ee78d110550579b848a01446a440f733fd17e1bf1850aa01551b61f415e03e5f5ab7f26b56f1c648edc93856177f5476ff9f8f6f5d80e8fe45913d208f49961
+  checksum: 10c0/00b3efed64c370cd5ae97023583996ff83939baf6f4af11393d536ca9e520b0cc1a82a81aa6d0350625bff398daaa69357df74383631f2c3a0aeb6974f4237c7
   languageName: node
   linkType: hard
 
@@ -6420,7 +6420,7 @@ __metadata:
     eslint: "npm:^9.25.1"
     eslint-config-next: "npm:^15.1.3"
     eslint-config-prettier: "npm:^10.1.5"
-    lucide-react: "npm:^0.469.0"
+    lucide-react: "npm:^0.510.0"
     millify: "npm:^6.1.0"
     mongodb-client-encryption: "npm:^6.1.0"
     mongoose: "npm:^8.9.5"
