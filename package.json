@@ -21,7 +21,7 @@
     "@radix-ui/react-slot": "^1.2.0",
     "@radix-ui/react-tabs": "^1.1.1",
     "@types/node": "22.10.2",
-    "@types/react": "^19.1.2",
+    "@types/react": "^19.1.4",
     "@types/react-dom": "^19.0.2",
     "@uploadthing/react": "^7.3.1",
     "autoprefixer": "10.4.20",
