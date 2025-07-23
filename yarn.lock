@@ -311,19 +311,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@headlessui/react@npm:^2.2.3":
-  version: 2.2.3
-  resolution: "@headlessui/react@npm:2.2.3"
+"@headlessui/react@npm:^2.2.5":
+  version: 2.2.5
+  resolution: "@headlessui/react@npm:2.2.5"
   dependencies:
     "@floating-ui/react": "npm:^0.26.16"
     "@react-aria/focus": "npm:^3.20.2"
     "@react-aria/interactions": "npm:^3.25.0"
-    "@tanstack/react-virtual": "npm:^3.13.6"
+    "@tanstack/react-virtual": "npm:^3.13.9"
     use-sync-external-store: "npm:^1.5.0"
   peerDependencies:
     react: ^18 || ^19 || ^19.0.0-rc
     react-dom: ^18 || ^19 || ^19.0.0-rc
-  checksum: 10c0/8f54836b7d2d621270266fed7ca2f6645c1a3d40f46fab397412d61fec201c7ee1b49d32643ea730e1f69bf387ee04c003ddf80361df4e1d700af44c50183eae
+  checksum: 10c0/40d6d15046ce7e831257ab9a6ffbe1d92114e70e3a3c77d7a0fdb0f061d045dcf336f08e76699ef043f6ed19654cc38f01adfc2934b407b400611501e2b51af8
   languageName: node
   linkType: hard
 
@@ -1904,22 +1904,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tanstack/react-virtual@npm:^3.13.6":
-  version: 3.13.8
-  resolution: "@tanstack/react-virtual@npm:3.13.8"
+"@tanstack/react-virtual@npm:^3.13.9":
+  version: 3.13.12
+  resolution: "@tanstack/react-virtual@npm:3.13.12"
   dependencies:
-    "@tanstack/virtual-core": "npm:3.13.8"
+    "@tanstack/virtual-core": "npm:3.13.12"
   peerDependencies:
     react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
     react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
-  checksum: 10c0/1604227dad2f1c8d3b8246f8afe9bc37998da8f97ed7ef1b5d703fe3417c8a54541592a9091e7c8e63521002672268292d347c5c17fe1e1e82b9d0b297ddd1b4
+  checksum: 10c0/0eda3d5691ec3bf93a1cdaa955f4972c7aa9a5026179622824bb52ff8c47e59ee4634208e52d77f43ffb3ce435ee39a0899d6a81f6316918ce89d68122490371
   languageName: node
   linkType: hard
 
-"@tanstack/virtual-core@npm:3.13.8":
-  version: 3.13.8
-  resolution: "@tanstack/virtual-core@npm:3.13.8"
-  checksum: 10c0/4b76b5d87fb26c928939a58d3887b9191574f029f60f9146eb05fd591f8b96a69bd3c7a1d64dd9d6cbfbfc85a0bd22b49a79fa4d3abab64eee595db9ad94f3ea
+"@tanstack/virtual-core@npm:3.13.12":
+  version: 3.13.12
+  resolution: "@tanstack/virtual-core@npm:3.13.12"
+  checksum: 10c0/483f38761b73db05c181c10181f0781c1051be3350ae5c378e65057e5f1fdd6606e06e17dbaad8a5e36c04b208ea1a1344cacd4eca0dcde60f335cf398e4d698
   languageName: node
   linkType: hard
 
@@ -7073,7 +7073,7 @@ __metadata:
   dependencies:
     "@clerk/nextjs": "npm:^6.25.0"
     "@clerk/themes": "npm:^2.2.36"
-    "@headlessui/react": "npm:^2.2.3"
+    "@headlessui/react": "npm:^2.2.5"
     "@hookform/resolvers": "npm:^5.0.1"
     "@microsoft/eslint-formatter-sarif": "npm:^3.1.0"
     "@next/eslint-plugin-next": "npm:^15.4.2"
