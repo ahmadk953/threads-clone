@@ -872,12 +872,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/eslint-plugin-next@npm:^15.4.2":
-  version: 15.4.2
-  resolution: "@next/eslint-plugin-next@npm:15.4.2"
+"@next/eslint-plugin-next@npm:^15.4.4":
+  version: 15.4.4
+  resolution: "@next/eslint-plugin-next@npm:15.4.4"
   dependencies:
     fast-glob: "npm:3.3.1"
-  checksum: 10c0/53806f57e776e83acf86490269b3f2370cbf1bf7e80f744974911227313f8f373a1d6ead4ee41c6a8e535f703b33ca6c8c03ad5abc0580ae30b38c474ec44b3d
+  checksum: 10c0/e32bd4c00beaaf7d815df678d99703824be840e6a416897aa69d861c72351b45343aaea4d79c489176f35ef94e0218fbee7185a55b0dea91a0ef1babaed8d602
   languageName: node
   linkType: hard
 
@@ -7061,7 +7061,7 @@ __metadata:
     "@headlessui/react": "npm:^2.2.6"
     "@hookform/resolvers": "npm:^5.0.1"
     "@microsoft/eslint-formatter-sarif": "npm:^3.1.0"
-    "@next/eslint-plugin-next": "npm:^15.4.2"
+    "@next/eslint-plugin-next": "npm:^15.4.4"
     "@radix-ui/react-dropdown-menu": "npm:^2.1.4"
     "@radix-ui/react-label": "npm:^2.1.6"
     "@radix-ui/react-slot": "npm:^1.2.3"
