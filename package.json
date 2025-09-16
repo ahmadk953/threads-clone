@@ -29,7 +29,7 @@
     "clsx": "^2.1.1",
     "lucide-react": "^0.513.0",
     "millify": "^6.1.0",
-    "mongodb-client-encryption": "^6.1.0",
+    "mongodb-client-encryption": "^6.5.0",
     "mongoose": "^8.16.5",
     "next": "15.4.7",
     "postcss": "8.5.6",
