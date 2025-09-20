@@ -47,7 +47,7 @@
     "tailwindcss-animate": "^1.0.7",
     "typescript": "5.8.3",
     "uploadthing": "^7.6.0",
-    "zod": "^3.23.8"
+    "zod": "^4.1.9"
   },
   "devDependencies": {
     "@microsoft/eslint-formatter-sarif": "^3.1.0",
