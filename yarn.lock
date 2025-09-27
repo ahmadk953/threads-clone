@@ -1979,18 +1979,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@uploadthing/mime-types@npm:0.3.5":
-  version: 0.3.5
-  resolution: "@uploadthing/mime-types@npm:0.3.5"
-  checksum: 10c0/21c81400a713bfb736b18d6596a640d722fb3118aca29779c5860e7896c095322f16fe4ece5a60f8e677e8a8397b4d5a3481fbd8ce10185ff69317fe8cbabfe7
+"@uploadthing/mime-types@npm:0.3.6":
+  version: 0.3.6
+  resolution: "@uploadthing/mime-types@npm:0.3.6"
+  checksum: 10c0/0abcc065491d877edf18bf0b10bd1fb2594ba73fec970a1df0f8ac84371557198951cff2a3720f1ae6b3f8323e54ddcd2d4a38247a52fb34c18cf95beaf17bba
   languageName: node
   linkType: hard
 
-"@uploadthing/react@npm:^7.3.1":
-  version: 7.3.1
-  resolution: "@uploadthing/react@npm:7.3.1"
+"@uploadthing/react@npm:^7.3.3":
+  version: 7.3.3
+  resolution: "@uploadthing/react@npm:7.3.3"
   dependencies:
-    "@uploadthing/shared": "npm:7.1.8"
+    "@uploadthing/shared": "npm:7.1.10"
     file-selector: "npm:0.6.0"
   peerDependencies:
     next: "*"
@@ -1999,7 +1999,18 @@ __metadata:
   peerDependenciesMeta:
     next:
       optional: true
-  checksum: 10c0/c2178ef38629af3da85bc6cd96e4d16a3ce484f66c043ad8162371ff9b5a0d52e295a1b8fe905a27b506e00c721fc2cb6e02a173bea19561a164f58013e05d52
+  checksum: 10c0/c299a5f0a6aedc8d6fe0fb44b4c377394a343b9103079074d9b5d97cfe50ae85c204000a09ffea6fb19f36ec90db562f865c4454825559a142b7b0c9f7e5908d
+  languageName: node
+  linkType: hard
+
+"@uploadthing/shared@npm:7.1.10":
+  version: 7.1.10
+  resolution: "@uploadthing/shared@npm:7.1.10"
+  dependencies:
+    "@uploadthing/mime-types": "npm:0.3.6"
+    effect: "npm:3.17.7"
+    sqids: "npm:^0.3.0"
+  checksum: 10c0/bff9eff8db146fa2601b131b3e0b2da0df6717ba278976eb0b2e49971e28dc9b0d82c70618ea0ca98ae05a871bb97724ba7a3b6f33adedc7db7da73a3f0d4289
   languageName: node
   linkType: hard
 
@@ -2011,17 +2022,6 @@ __metadata:
     effect: "npm:3.12.0"
     sqids: "npm:^0.3.0"
   checksum: 10c0/8f6d56b167b024b83cde7c17f5e67cc8dddefc88b31bc8fb7a3a0f9c2707d075f0a24edb8de3c6c3fa368aa32d742544049739c6f6ff609d88e4990cbc0e1fbb
-  languageName: node
-  linkType: hard
-
-"@uploadthing/shared@npm:7.1.8":
-  version: 7.1.8
-  resolution: "@uploadthing/shared@npm:7.1.8"
-  dependencies:
-    "@uploadthing/mime-types": "npm:0.3.5"
-    effect: "npm:3.14.21"
-    sqids: "npm:^0.3.0"
-  checksum: 10c0/a976e244a988d590368bfcd5e4c8a64afb5bc1ac62fefd2f8ba8fdf57403af7009f98318a57be8e60834fda59e06e3937830b2f0abc744af26c7fa10fc0d1f09
   languageName: node
   linkType: hard
 
@@ -2859,13 +2859,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"effect@npm:3.14.21":
-  version: 3.14.21
-  resolution: "effect@npm:3.14.21"
+"effect@npm:3.17.7":
+  version: 3.17.7
+  resolution: "effect@npm:3.17.7"
   dependencies:
     "@standard-schema/spec": "npm:^1.0.0"
     fast-check: "npm:^3.23.1"
-  checksum: 10c0/6b5704f9befe581dcf63efaed18362cf5f0be720c63fa5740718cd725f82153d55d2f87560e17ec56e635b28dc9bd957663cc450f0916b1af066a37c1afa4033
+  checksum: 10c0/f701dcd8b1b1bba3bf8cf2831bd30a3ee2a9a6e0c190154f3800a457ab9f329ec66903f458a378a4da919445a9f7bc675ee4474a19c4d527aa058798985a66d7
   languageName: node
   linkType: hard
 
@@ -6680,7 +6680,7 @@ __metadata:
     "@types/react-dom": "npm:^19.0.2"
     "@typescript-eslint/eslint-plugin": "npm:^8.33.0"
     "@typescript-eslint/parser": "npm:^8.34.1"
-    "@uploadthing/react": "npm:^7.3.1"
+    "@uploadthing/react": "npm:^7.3.3"
     autoprefixer: "npm:10.4.21"
     class-variance-authority: "npm:^0.7.1"
     clsx: "npm:^2.1.1"
