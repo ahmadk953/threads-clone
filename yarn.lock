@@ -5627,16 +5627,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-intersection-observer@npm:^9.14.1":
-  version: 9.15.1
-  resolution: "react-intersection-observer@npm:9.15.1"
+"react-intersection-observer@npm:^10.0.0":
+  version: 10.0.0
+  resolution: "react-intersection-observer@npm:10.0.0"
   peerDependencies:
     react: ^17.0.0 || ^18.0.0 || ^19.0.0
     react-dom: ^17.0.0 || ^18.0.0 || ^19.0.0
   peerDependenciesMeta:
     react-dom:
       optional: true
-  checksum: 10c0/ac2ce7093aef2d6cc3ec9ddd88b8e3f54a7320d867170433a12014f881400553517b3304c4e7bd7b666a44dbd42e94472e5cffdfa45356c9e17d3a0a1ba02b3a
+  checksum: 10c0/ab2d9316adaab401cfff657ced221c12665434dfa0846d8d22b6871c053916550c541e5835969399ae292ee8b68b5cfc5cc3047bfd69b09efc605dc95aef532f
   languageName: node
   linkType: hard
 
@@ -6699,7 +6699,7 @@ __metadata:
     react-dom: "npm:^19.0.0"
     react-hook-form: "npm:^7.54.2"
     react-icons: "npm:^5.4.0"
-    react-intersection-observer: "npm:^9.14.1"
+    react-intersection-observer: "npm:^10.0.0"
     react-share: "npm:^5.1.2"
     sharp: "npm:^0.34.3"
     svix: "npm:^1.64.1"
